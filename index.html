@@ -1,813 +1,810 @@
-```html
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    .gradient-bg {
-        background: linear-gradient(135deg, #a34723 0%, #b6601a 100%);
-    }
-    
-    .accent-gradient-bg {
-        background: linear-gradient(135deg, #23595f 0%, #7c449b 100%);
-    }
-    
-    .card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    }
-    
-    .skill-pill {
-        transition: all 0.3s ease;
-    }
-    
-    .skill-pill:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    }
-    
-    .timeline-item::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 2px;
-        background-color: #a34723;
-        transform: translateX(-50%);
-    }
-    
-    .timeline-dot {
-        position: absolute;
-        left: 0;
-        top: 24px;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: #a34723;
-        transform: translateX(-50%);
-    }
-    
-    .newsletter-card {
-        background: linear-gradient(135deg, #7c449b 0%, #23595f 100%);
-    }
-    
-    .github-card {
-        border-left: 4px solid #7c449b;
-    }
-    
-    .language-switch {
-        transition: all 0.3s ease;
-    }
-    
-    .language-switch:hover {
-        transform: scale(1.05);
-    }
-    
-    [data-lang="en"] {
-        display: none;
-    }
-    
-    .lang-en [data-lang="pt"] {
-        display: none;
-    }
-    
-    .lang-en [data-lang="en"] {
-        display: block;
-    }
-    
-    .lang-en span[data-lang="en"],
-    .lang-en a[data-lang="en"],
-    .lang-en div[data-lang="en"],
-    .lang-en h1[data-lang="en"],
-    .lang-en h2[data-lang="en"],
-    .lang-en h3[data-lang="en"],
-    .lang-en h4[data-lang="en"],
-    .lang-en p[data-lang="en"],
-    .lang-en button[data-lang="en"] {
-        display: inline-block;
-    }
-    
-    .lang-en .flex-lang[data-lang="en"] {
-        display: flex;
-    }
-    
-    .lang-en .grid-lang[data-lang="en"] {
-        display: grid;
-    }
-    
-    .lang-en .inline-flex-lang[data-lang="en"] {
-        display: inline-flex;
-    }
-</style>
-            <a href="#experiencia" class="font-medium hover:text-primary transition-colors" data-lang="pt">Experiência</a>
-            <a href="#experiencia" class="font-medium hover:text-primary transition-colors" data-lang="en">Experience</a>
-            
-            <a href="#habilidades" class="font-medium hover:text-primary transition-colors" data-lang="pt">Habilidades</a>
-            <a href="#habilidades" class="font-medium hover:text-primary transition-colors" data-lang="en">Skills</a>
-            
-            <a href="#projetos" class="font-medium hover:text-primary transition-colors" data-lang="pt">Projetos</a>
-            <a href="#projetos" class="font-medium hover:text-primary transition-colors" data-lang="en">Projects</a>
-            
-            <a href="#github" class="font-medium hover:text-primary transition-colors">GitHub</a>
-            
-            <a href="#contato" class="font-medium hover:text-primary transition-colors" data-lang="pt">Contato</a>
-            <a href="#contato" class="font-medium hover:text-primary transition-colors" data-lang="en">Contact</a>
-            
-            <button id="language-toggle" class="flex items-center space-x-1 bg-tertiary bg-opacity-30 px-3 py-1 rounded-full hover:bg-opacity-50 transition-colors language-switch">
-                <span class="flag-icon" data-lang="pt">🇧🇷</span>
-                <span class="flag-icon" data-lang="en">🇺🇸</span>
-                <span class="text-sm font-medium" data-lang="pt">PT</span>
-                <span class="text-sm font-medium" data-lang="en">EN</span>
-            </button>
-        </div>
-        <div class="md:hidden flex items-center space-x-4">
-            <button id="language-toggle-mobile" class="flex items-center space-x-1 bg-tertiary bg-opacity-30 px-3 py-1 rounded-full hover:bg-opacity-50 transition-colors language-switch">
-                <span class="flag-icon" data-lang="pt">🇧🇷</span>
-                <span class="flag-icon" data-lang="en">🇺🇸</span>
-            </button>
-            <button id="mobile-menu-button" class="text-gray-500 hover:text-primary">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
-        </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg absolute w-full">
-        <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
-            <a href="#sobre" class="py-2 font-medium hover:text-primary transition-colors" data-lang="pt">Sobre</a>
-            <a href="#sobre" class="py-2 font-medium hover:text-primary transition-colors" data-lang="en">About</a>
-            
-            <a href="#experiencia" class="py-2 font-medium hover:text-primary transition-colors" data-lang="pt">Experiência</a>
-            <a href="#experiencia" class="py-2 font-medium hover:text-primary transition-colors" data-lang="en">Experience</a>
-            
-            <a href="#habilidades" class="py-2 font-medium hover:text-primary transition-colors" data-lang="pt">Habilidades</a>
-            <a href="#habilidades" class="py-2 font-medium hover:text-primary transition-colors" data-lang="en">Skills</a>
-            
-            <a href="#projetos" class="py-2 font-medium hover:text-primary transition-colors" data-lang="pt">Projetos</a>
-            <a href="#projetos" class="py-2 font-medium hover:text-primary transition-colors" data-lang="en">Projects</a>
-            
-            <a href="#github" class="py-2 font-medium hover:text-primary transition-colors">GitHub</a>
-            
-            <a href="#contato" class="py-2 font-medium hover:text-primary transition-colors" data-lang="pt">Contato</a>
-            <a href="#contato" class="py-2 font-medium hover:text-primary transition-colors" data-lang="en">Contact</a>
-        </div>
-    </div>
-</nav>
+<!DOCTYPE html>
+<!-- Adicionada a classe lang-pt por padrão. O JS vai trocar para lang-en quando necessário. -->
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Paula Luiza</title>
 
-<!-- Hero Section -->
-<header class="gradient-bg text-white">
-    <div class="container mx-auto px-4 py-20 md:py-32 flex flex-col items-center text-center">
-        <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-tertiary mb-6">
-            <svg class="w-full h-full text-tertiary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
-            </svg>
-        </div>
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Paula Luiza</h1>
-        <p class="text-xl md:text-2xl mb-8 max-w-2xl" data-lang="pt">Analista de Sistemas | Desenvolvedora SQL | Análise de Dados | Embaixadora WWWiT</p>
-        <p class="text-xl md:text-2xl mb-8 max-w-2xl" data-lang="en">Systems Analyst | SQL Developer | Data Analytics | WWWiT Ambassador</p>
-        <div class="flex flex-wrap justify-center gap-3">
-            <a href="#contato" class="bg-tertiary text-primary font-medium px-6 py-3 rounded-full hover:bg-opacity-90 transition-colors" data-lang="pt">Entre em contato</a>
-            <a href="#contato" class="bg-tertiary text-primary font-medium px-6 py-3 rounded-full hover:bg-opacity-90 transition-colors" data-lang="en">Contact me</a>
-            
-            <a href="#experiencia" class="bg-transparent border-2 border-tertiary text-white font-medium px-6 py-3 rounded-full hover:bg-tertiary hover:text-primary transition-colors" data-lang="pt">Ver experiência</a>
-            <a href="#experiencia" class="bg-transparent border-2 border-tertiary text-white font-medium px-6 py-3 rounded-full hover:bg-tertiary hover:text-primary transition-colors" data-lang="en">View experience</a>
-        </div>
-    </div>
-</header>
+    <!-- DEPENDÊNCIAS ESSENCIAIS QUE ESTAVAM FALTANDO -->
+    <!-- 1. Tailwind CSS (necessário para todas as classes como flex, p-4, md:text-lg, etc.) -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- About Section -->
-<section id="sobre" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="pt">Sobre Mim</h2>
-        <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="en">About Me</h2>
-        <div class="max-w-3xl mx-auto">
-            <p class="text-lg leading-relaxed mb-6" data-lang="pt">
-                Com mais de 4 anos de experiência, tenho um sólido conhecimento em SQL e no desenvolvimento de relatórios dinâmicos e orientados por dados, que geram insights práticos e valiosos para apoiar a tomada de decisões.
-            </p>
-            <p class="text-lg leading-relaxed mb-6" data-lang="en">
-                With over 4 years of experience, I have solid knowledge in SQL and the development of dynamic, data-driven reports that generate practical and valuable insights to support decision-making.
-            </p>
-            
-            <p class="text-lg leading-relaxed mb-6" data-lang="pt">
-                Sou formada em Ciência da Computação e especializada em Ciência de Dados, o que me proporciona uma base sólida para enfrentar desafios de negócios com dados. Além disso, sou Educadora de Tecnologia certificada pelo EducaTech da {reprograma}, o que me capacita a ensinar uma ampla gama de tópicos técnicos, ajudando indivíduos e equipes a desenvolverem as habilidades necessárias para se destacarem no mundo digital.
-            </p>
-            <p class="text-lg leading-relaxed mb-6" data-lang="en">
-                I hold a degree in Computer Science and specialize in Data Science, which provides me with a solid foundation to tackle business challenges with data. Additionally, I am a certified Technology Educator through {reprograma}'s EducaTech program, which enables me to teach a wide range of technical topics, helping individuals and teams develop the skills needed to excel in the digital world.
-            </p>
-            
-            <p class="text-lg leading-relaxed mb-6" data-lang="pt">
-                Como embaixadora da WorldWide Women in Tech, tenho o compromisso de promover a diversidade e inclusão no setor de tecnologia, conectando e apoiando mulheres em suas jornadas profissionais.
-            </p>
-            <p class="text-lg leading-relaxed mb-6" data-lang="en">
-                As an ambassador for WorldWide Women in Tech, I am committed to promoting diversity and inclusion in the technology sector, connecting and supporting women in their professional journeys.
-            </p>
-            
-            <div class="mt-10">
-                <h3 class="text-xl font-semibold mb-4 text-secondary" data-lang="pt">Áreas de Expertise:</h3>
-                <h3 class="text-xl font-semibold mb-4 text-secondary" data-lang="en">Areas of Expertise:</h3>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="card bg-tertiary bg-opacity-20 p-6 rounded-lg shadow-sm">
-                        <div class="text-primary text-3xl mb-4">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4 class="text-lg font-semibold mb-2 text-secondary" data-lang="pt">Desenvolvimento e Otimização de Relatórios</h4>
-                        <h4 class="text-lg font-semibold mb-2 text-secondary" data-lang="en">Report Development & Optimization</h4>
-                        
-                        <p class="text-gray-600" data-lang="pt">Projeto e aprimoro relatórios dinâmicos utilizando Stimulsoft, garantindo insights relevantes para cada cliente.</p>
-                        <p class="text-gray-600" data-lang="en">I design and enhance dynamic reports using Stimulsoft, ensuring relevant insights for each client.</p>
-                    </div>
-                    
-                    <div class="card bg-tertiary bg-opacity-20 p-6 rounded-lg shadow-sm">
-                        <div class="text-primary text-3xl mb-4">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h4 class="text-lg font-semibold mb-2 text-secondary">SQL</h4>
-                        
-                        <p class="text-gray-600" data-lang="pt">Habilidade em escrever consultas SQL otimizadas para SQL Server e Oracle SQL, garantindo integração e desempenho eficientes.</p>
-                        <p class="text-gray-600" data-lang="en">Skilled in writing optimized SQL queries for SQL Server and Oracle SQL, ensuring efficient integration and performance.</p>
-                    </div>
-                    
-                    <div class="card bg-tertiary bg-opacity-20 p-6 rounded-lg shadow-sm">
-                        <div class="text-primary text-3xl mb-4">
-                            <i class="fas fa-analytics"></i>
-                        </div>
-                        <h4 class="text-lg font-semibold mb-2 text-secondary" data-lang="pt">Análise de Dados</h4>
-                        <h4 class="text-lg font-semibold mb-2 text-secondary" data-lang="en">Data Analysis</h4>
-                        
-                        <p class="text-gray-600" data-lang="pt">Analiso grandes volumes de dados para identificar padrões e gerar relatórios que orientam estratégias empresariais.</p>
-                        <p class="text-gray-600" data-lang="en">I analyze large volumes of data to identify patterns and generate reports that guide business strategies.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- 2. Font Awesome (necessário para todos os ícones como fas fa-bars, fab fa-github, etc.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- Experience Section -->
-<section id="experiencia" class="py-16 bg-tertiary bg-opacity-20">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="pt">Experiência Profissional</h2>
-        <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="en">Professional Experience</h2>
+    <!-- SEU CSS CUSTOMIZADO, AGORA NO LUGAR CORRETO -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Cores customizadas para o Tailwind reconhecer (adicionado para corrigir) */
+        .bg-primary { background-color: #a34723; }
+        .bg-secondary { background-color: #23595f; }
+        .bg-tertiary { background-color: #f0e6d2; }
+        .bg-accent { background-color: #7c449b; }
+        .text-primary { color: #a34723; }
+        .text-secondary { color: #23595f; }
+        .text-tertiary { color: #f0e6d2; }
+        .text-accent { color: #7c449b; }
+        .text-purple { color: #7c449b; }
+        .bg-purple { background-color: #7c449b; }
+        .border-primary { border-color: #a34723; }
+        .border-tertiary { border-color: #f0e6d2; }
+        .hover\:text-primary:hover { color: #a34723; }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #a34723 0%, #b6601a 100%);
+        }
+
+        .accent-gradient-bg {
+            background: linear-gradient(135deg, #23595f 0%, #7c449b 100%);
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+
+        .skill-pill:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Correção: a linha da timeline não aparecia por ter width 0.5. Mudei para 2px e ajustei a posição */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 8px; /* Centralizado com o ponto */
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #e5e7eb; /* Cor mais suave para a linha */
+            transform: translateX(-50%);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 8px; /* Alinhado com a linha */
+            top: 24px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #a34723;
+            border: 3px solid #f0e6d2; /* Efeito visual melhor */
+            transform: translateX(-50%);
+            z-index: 1; /* Para ficar sobre a linha */
+        }
         
-        <div class="max-w-3xl mx-auto relative">
-            <!-- Timeline line -->
-            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-200"></div>
-            
-            <!-- Experience 1 -->
-            <div class="timeline-item relative pl-8 pb-12">
-                <div class="timeline-dot"></div>
-                <div class="card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                        <h3 class="text-xl font-bold text-primary" data-lang="pt">Analista e Desenvolvedora de Sistemas</h3>
-                        <h3 class="text-xl font-bold text-primary" data-lang="en">Systems Analyst & Developer</h3>
-                        
-                        <span class="text-gray-500 text-sm mt-1 md:mt-0" data-lang="pt">Atual</span>
-                        <span class="text-gray-500 text-sm mt-1 md:mt-0" data-lang="en">Current</span>
-                    </div>
-                    <h4 class="text-lg font-medium mb-3 text-secondary">Engeman Software de Manutenção</h4>
-                    
-                    <p class="text-gray-600 mb-4" data-lang="pt">
-                        Desenvolvo e otimizo consultas SQL e Oracle, aprimorando a performance dos bancos de dados e garantindo maior eficiência no processamento de informações. Crio relatórios dinâmicos e dashboards personalizados com Stimulsoft, transformando dados brutos em insights estratégicos.
-                    </p>
-                    <p class="text-gray-600 mb-4" data-lang="en">
-                        I develop and optimize SQL and Oracle queries, improving database performance and ensuring greater efficiency in information processing. I create dynamic reports and custom dashboards with Stimulsoft, transforming raw data into strategic insights.
-                    </p>
-                    
-                    <p class="text-gray-600" data-lang="pt">
-                        Contribuo para a personalização de telas e funcionalidades em linguagem padrão da empresa (baseada em Pascal/Delphi), tornando os sistemas mais intuitivos e alinhados às necessidades dos usuários. Também compartilho conhecimento técnico, ministrando treinamentos e workshops para equipes internas e clientes.
-                    </p>
-                    <p class="text-gray-600" data-lang="en">
-                        I contribute to the customization of screens and functionalities in the company's standard language (based on Pascal/Delphi), making systems more intuitive and aligned with user needs. I also share technical knowledge by conducting training sessions and workshops for internal teams and clients.
-                    </p>
-                </div>
+        .timeline-item {
+             margin-left: 20px; /* Adiciona espaço para a linha e o ponto */
+        }
+
+        .newsletter-card {
+            background: linear-gradient(135deg, #7c449b 0%, #23595f 100%);
+        }
+
+        .github-card {
+            border-left: 4px solid #7c449b;
+        }
+
+        .language-switch {
+            transition: all 0.3s ease;
+        }
+
+        .language-switch:hover {
+            transform: scale(1.05);
+        }
+
+        /* LÓGICA DE TRADUÇÃO */
+        /* Por padrão, esconde inglês */
+        [data-lang="en"] {
+            display: none;
+        }
+
+        /* Quando o html tiver a classe lang-en... */
+        .lang-en [data-lang="pt"] {
+            display: none; /* Esconde português */
+        }
+        .lang-en [data-lang="en"] {
+            display: block; /* Mostra inglês (block para títulos, etc) */
+        }
+        
+        /* Ajustes finos para elementos inline e flex/grid para que não quebrem o layout */
+        .lang-en span[data-lang="en"],
+        .lang-en a[data-lang="en"],
+        .lang-en button[data-lang="en"],
+        .lang-en .inline-block-lang[data-lang="en"] {
+            display: inline-block;
+        }
+        
+        .lang-en .flex-lang[data-lang="en"] {
+            display: flex;
+        }
+        
+        .lang-en .grid-lang[data-lang="en"] {
+            display: grid;
+        }
+        
+        .lang-en .inline-flex-lang[data-lang="en"] {
+            display: inline-flex;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- SEU CONTEÚDO HTML COMEÇA AQUI -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+          <a href="#" class="text-2xl font-bold">Paula<span class="text-primary">.dev</span></a>
+          <div class="hidden md:flex items-center space-x-6">
+              <a href="#sobre" class="font-medium hover:text-primary transition-colors" data-lang="pt">Sobre</a>
+              <a href="#sobre" class="font-medium hover:text-primary transition-colors" data-lang="en">About</a>
+              <a href="#experiencia" class="font-medium hover:text-primary transition-colors" data-lang="pt">Experiência</a>
+              <a href="#experiencia" class="font-medium hover:text-primary transition-colors" data-lang="en">Experience</a>
+              <a href="#habilidades" class="font-medium hover:text-primary transition-colors" data-lang="pt">Habilidades</a>
+              <a href="#habilidades" class="font-medium hover:text-primary transition-colors" data-lang="en">Skills</a>
+              <a href="#projetos" class="font-medium hover:text-primary transition-colors" data-lang="pt">Projetos</a>
+              <a href="#projetos" class="font-medium hover:text-primary transition-colors" data-lang="en">Projects</a>
+              <a href="#github" class="font-medium hover:text-primary transition-colors">GitHub</a>
+              <a href="#contato" class="font-medium hover:text-primary transition-colors" data-lang="pt">Contato</a>
+              <a href="#contato" class="font-medium hover:text-primary transition-colors" data-lang="en">Contact</a>
+              <button id="language-toggle" class="flex items-center space-x-1 bg-tertiary bg-opacity-30 px-3 py-1 rounded-full hover:bg-opacity-50 transition-colors language-switch">
+                  <span class="flag-icon" data-lang="pt">🇧🇷</span>
+                  <span class="flag-icon" data-lang="en">🇺🇸</span>
+                  <span class="text-sm font-medium" data-lang="pt">PT</span>
+                  <span class="text-sm font-medium" data-lang="en">EN</span>
+              </button>
+          </div>
+          <div class="md:hidden flex items-center space-x-4">
+              <button id="language-toggle-mobile" class="flex items-center space-x-1 bg-tertiary bg-opacity-30 px-3 py-1 rounded-full hover:bg-opacity-50 transition-colors language-switch">
+                  <span class="flag-icon" data-lang="pt">🇧🇷</span>
+                  <span class="flag-icon" data-lang="en">🇺🇸</span>
+              </button>
+              <button id="mobile-menu-button" class="text-gray-500 hover:text-primary">
+                  <i class="fas fa-bars text-xl"></i>
+              </button>
+          </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg absolute w-full">
+          <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+              <a href="#sobre" class="py-2 font-medium hover:text-primary transition-colors" data-lang="pt">Sobre</a>
+              <a href="#sobre" class="py-2 font-medium hover:text-primary transition-colors" data-lang="en">About</a>
+              <a href="#experiencia" class="py-2 font-medium hover:text-primary transition-colors" data-lang="pt">Experiência</a>
+              <a href="#experiencia" class="py-2 font-medium hover:text-primary transition-colors" data-lang="en">Experience</a>
+              <a href="#habilidades" class="py-2 font-medium hover:text-primary transition-colors" data-lang="pt">Habilidades</a>
+              <a href="#habilidades" class="py-2 font-medium hover:text-primary transition-colors" data-lang="en">Skills</a>
+              <a href="#projetos" class="py-2 font-medium hover:text-primary transition-colors" data-lang="pt">Projetos</a>
+              <a href="#projetos" class="py-2 font-medium hover:text-primary transition-colors" data-lang="en">Projects</a>
+              <a href="#github" class="py-2 font-medium hover:text-primary transition-colors">GitHub</a>
+              <a href="#contato" class="py-2 font-medium hover:text-primary transition-colors" data-lang="pt">Contato</a>
+              <a href="#contato" class="py-2 font-medium hover:text-primary transition-colors" data-lang="en">Contact</a>
+          </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-20 md:py-32 flex flex-col items-center text-center">
+            <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-tertiary mb-6">
+                <svg class="w-full h-full text-tertiary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                </svg>
             </div>
-            
-            <!-- Experience 2 -->
-            <div class="timeline-item relative pl-8 pb-12">
-                <div class="timeline-dot"></div>
-                <div class="card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                        <h3 class="text-xl font-bold text-primary" data-lang="pt">Desenvolvedora de Software</h3>
-                        <h3 class="text-xl font-bold text-primary" data-lang="en">Software Developer</h3>
-                        
-                        <span class="text-gray-500 text-sm mt-1 md:mt-0">Set 2020 - Jul 2022</span>
-                    </div>
-                    <h4 class="text-lg font-medium mb-3 text-secondary">Uaisoft Sistemas De Gestão</h4>
-                    
-                    <p class="text-gray-600 mb-4" data-lang="pt">
-                        Desenvolvi e mantive funcionalidades em sistema ERP, garantindo otimização e estabilidade do sistema para suportar operações críticas do negócio. Fui responsável pela criação de consultas complexas em SQL, extraindo dados estratégicos que apoiaram análises detalhadas e decisões gerenciais.
-                    </p>
-                    <p class="text-gray-600 mb-4" data-lang="en">
-                        I developed and maintained ERP system functionalities, ensuring system optimization and stability to support critical business operations. I was responsible for creating complex SQL queries, extracting strategic data that supported detailed analyses and management decisions.
-                    </p>
-                    
-                    <p class="text-gray-600" data-lang="pt">
-                        Atuei na identificação e resolução de problemas e bugs, assegurando a qualidade, funcionalidade e performance contínua do ERP. Além disso, criei relatórios personalizados com Stimulsoft e mantive relatórios em Crystal Reports, entregando análises precisas e consistentes.
-                    </p>
-                    <p class="text-gray-600" data-lang="en">
-                        I worked on identifying and resolving issues and bugs, ensuring the quality, functionality, and continuous performance of the ERP. Additionally, I created custom reports with Stimulsoft and maintained Crystal Reports, delivering accurate and consistent analyses.
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Volunteer Work -->
-            <div class="timeline-item relative pl-8">
-                <div class="timeline-dot"></div>
-                <div class="card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                        <h3 class="text-xl font-bold text-primary" data-lang="pt">Embaixadora</h3>
-                        <h3 class="text-xl font-bold text-primary" data-lang="en">Ambassador</h3>
-                        
-                        <span class="text-gray-500 text-sm mt-1 md:mt-0">Jun 2022 - Atual</span>
-                    </div>
-                    <h4 class="text-lg font-medium mb-3 text-secondary">WorldWide Women in Tech</h4>
-                    
-                    <div class="inline-block bg-purple text-white text-xs font-medium px-2.5 py-0.5 rounded-full mb-4" data-lang="pt">Trabalho Voluntário</div>
-                    <div class="inline-block bg-purple text-white text-xs font-medium px-2.5 py-0.5 rounded-full mb-4" data-lang="en">Volunteer Work</div>
-                    
-                    <p class="text-gray-600 mb-4" data-lang="pt">
-                        Atuo como embaixadora voluntária na organização sem fins lucrativos WorldWide Women in Tech, participando ativamente na gestão de mídias sociais, promoção de eventos e organização de programas de mentoria.
-                    </p>
-                    <p class="text-gray-600 mb-4" data-lang="en">
-                        I serve as a volunteer ambassador for the non-profit organization WorldWide Women in Tech, actively participating in social media management, event promotion, and organizing mentorship programs.
-                    </p>
-                    
-                    <p class="text-gray-600" data-lang="pt">
-                        Responsável por conectar mentoras e mentoradas, contribuindo para o desenvolvimento profissional de mulheres em STEM (Ciência, Tecnologia, Engenharia e Matemática).
-                    </p>
-                    <p class="text-gray-600" data-lang="en">
-                        Responsible for connecting mentors and mentees, contributing to the professional development of women in STEM (Science, Technology, Engineering, and Mathematics).
-                    </p>
-                </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Paula Luiza</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl" data-lang="pt">Analista de Sistemas | Desenvolvedora SQL | Análise de Dados | Embaixadora WWWiT</p>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl" data-lang="en">Systems Analyst | SQL Developer | Data Analytics | WWWiT Ambassador</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#contato" class="bg-tertiary text-primary font-medium px-6 py-3 rounded-full hover:bg-opacity-90 transition-colors" data-lang="pt">Entre em contato</a>
+                <a href="#contato" class="bg-tertiary text-primary font-medium px-6 py-3 rounded-full hover:bg-opacity-90 transition-colors" data-lang="en">Contact me</a>
+                <a href="#experiencia" class="bg-transparent border-2 border-tertiary text-white font-medium px-6 py-3 rounded-full hover:bg-tertiary hover:text-primary transition-colors" data-lang="pt">Ver experiência</a>
+                <a href="#experiencia" class="bg-transparent border-2 border-tertiary text-white font-medium px-6 py-3 rounded-full hover:bg-tertiary hover:text-primary transition-colors" data-lang="en">View experience</a>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- Skills Section -->
-<section id="habilidades" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="pt">Habilidades Técnicas</h2>
-        <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="en">Technical Skills</h2>
-        
-        <div class="max-w-3xl mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">SQL Server</div>
-                <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">T-SQL</div>
-                <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">PL/SQL</div>
-                <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">Stimulsoft</div>
-                <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">Python</div>
-                <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">C#</div>
-                <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">Power BI</div>
-                <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center" data-lang="pt">Análise de Dados</div>
-                <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center" data-lang="en">Data Analysis</div>
-                <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center" data-lang="pt">Visualização de Dados</div>
-                <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center" data-lang="en">Data Visualization</div>
-            </div>
-            
-            <div class="mt-12">
-                <h3 class="text-xl font-semibold mb-6 text-secondary" data-lang="pt">Níveis de Proficiência</h3>
-                <h3 class="text-xl font-semibold mb-6 text-secondary" data-lang="en">Proficiency Levels</h3>
-                
-                <div class="space-y-6">
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">SQL (T-SQL, PL/SQL)</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Stimulsoft</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium" data-lang="pt">Análise de Dados</span>
-                            <span class="font-medium" data-lang="en">Data Analysis</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Power BI</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <div class="flex justify-between mb-1">
-                            <span class="font-medium">Python</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5">
-                            <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-12">
-                <h3 class="text-xl font-semibold mb-6 text-secondary" data-lang="pt">Idiomas</h3>
-                <h3 class="text-xl font-semibold mb-6 text-secondary" data-lang="en">Languages</h3>
-                
-                <div class="flex items-center space-x-2 mb-2">
-                    <span class="font-medium" data-lang="pt">Português:</span>
-                    <span class="font-medium" data-lang="en">Portuguese:</span>
-                    <div class="flex">
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                    </div>
-                    <span class="text-gray-600" data-lang="pt">(Nativo)</span>
-                    <span class="text-gray-600" data-lang="en">(Native)</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <span class="font-medium" data-lang="pt">Inglês:</span>
-                    <span class="font-medium" data-lang="en">English:</span>
-                    <div class="flex">
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star-half-alt text-secondary"></i>
-                        <i class="far fa-star text-secondary"></i>
-                    </div>
-                    <span class="text-gray-600" data-lang="pt">(Intermediário)</span>
-                    <span class="text-gray-600" data-lang="en">(Intermediate)</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projetos" class="py-16 bg-tertiary bg-opacity-20">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="pt">Projetos & Iniciativas</h2>
-        <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="en">Projects & Initiatives</h2>
-        
-        <div class="max-w-3xl mx-auto">
-            <!-- Newsletter Card -->
-            <div class="newsletter-card rounded-xl overflow-hidden shadow-lg mb-12">
-                <div class="p-8 text-white">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4">
-                            <i class="fas fa-newspaper text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold">Vozes e Dados</h3>
-                            <p class="text-white text-opacity-80" data-lang="pt">Newsletter Mensal no LinkedIn</p>
-                            <p class="text-white text-opacity-80" data-lang="en">Monthly LinkedIn Newsletter</p>
-                        </div>
-                    </div>
-                    <p class="mb-6 text-lg" data-lang="pt">
-                        Uma newsletter mensal sobre dados, diversidade, histórias inspiradoras e insights do universo tech.
-                    </p>
-                    <p class="mb-6 text-lg" data-lang="en">
-                        A monthly newsletter about data, diversity, inspiring stories, and insights from the tech universe.
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-3 mb-6">
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="pt">Dados</span>
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="en">Data</span>
-                        
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="pt">Diversidade</span>
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="en">Diversity</span>
-                        
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Tech</span>
-                        
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="pt">Carreira</span>
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="en">Career</span>
-                    </div>
-                    
-                    <a href="#" class="inline-flex items-center bg-white text-purple font-medium px-5 py-2 rounded-full hover:bg-opacity-90 transition-colors" data-lang="pt">
-                        Assinar Newsletter
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="#" class="inline-flex items-center bg-white text-purple font-medium px-5 py-2 rounded-full hover:bg-opacity-90 transition-colors" data-lang="en">
-                        Subscribe to Newsletter
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Women in Tech Initiative -->
-            <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 mb-12">
-                <div class="p-8">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-purple bg-opacity-20 flex items-center justify-center mr-4">
-                            <i class="fas fa-users text-purple text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-800">WorldWide Women in Tech</h3>
-                            <p class="text-gray-500" data-lang="pt">Programa de Mentoria</p>
-                            <p class="text-gray-500" data-lang="en">Mentorship Program</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6" data-lang="pt">
-                        Como embaixadora da WWWiT, ajudo a conectar mulheres em tecnologia com mentoras experientes, 
-                        criando oportunidades de crescimento profissional e desenvolvimento de carreira.
-                    </p>
-                    <p class="text-gray-600 mb-6" data-lang="en">
-                        As a WWWiT ambassador, I help connect women in technology with experienced mentors, 
-                        creating opportunities for professional growth and career development.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                        <div class="bg-tertiary bg-opacity-20 p-4 rounded-lg text-center">
-                            <div class="text-purple text-2xl font-bold mb-1">20+</div>
-                            <div class="text-gray-500 text-sm" data-lang="pt">Mentorias Realizadas</div>
-                            <div class="text-gray-500 text-sm" data-lang="en">Mentorships Completed</div>
-                        </div>
-                        <div class="bg-tertiary bg-opacity-20 p-4 rounded-lg text-center">
-                            <div class="text-purple text-2xl font-bold mb-1">5</div>
-                            <div class="text-gray-500 text-sm" data-lang="pt">Eventos Organizados</div>
-                            <div class="text-gray-500 text-sm" data-lang="en">Events Organized</div>
-                        </div>
-                        <div class="bg-tertiary bg-opacity-20 p-4 rounded-lg text-center">
-                            <div class="text-purple text-2xl font-bold mb-1">100+</div>
-                            <div class="text-gray-500 text-sm" data-lang="pt">Mulheres Impactadas</div>
-                            <div class="text-gray-500 text-sm" data-lang="en">Women Impacted</div>
-                        </div>
-                    </div>
-                    
-                    <a href="#" class="inline-flex items-center text-purple font-medium hover:underline" data-lang="pt">
-                        Saiba mais sobre o programa
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="#" class="inline-flex items-center text-purple font-medium hover:underline" data-lang="en">
-                        Learn more about the program
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- GitHub Projects Section -->
-<section id="github" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="pt">Projetos no GitHub</h2>
-        <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="en">GitHub Projects</h2>
-        
-        <div class="max-w-3xl mx-auto">
-            <div class="flex justify-center mb-8">
-                <a href="https://github.com/paulalcssantos" target="_blank" class="flex items-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                    <i class="fab fa-github text-xl mr-2"></i>
-                    <span>github.com/paulalcssantos</span>
-                </a>
-            </div>
-            
-            <!-- GitHub Projects -->
-            <div class="space-y-8">
-                <!-- AmeliaBot -->
-                <div class="github-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-robot text-purple text-2xl mr-3"></i>
-                        <h3 class="text-xl font-bold">AmeliaBot</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4" data-lang="pt">
-                        Ferramenta dedicada a oferecer apoio, assistência, orientação e informações essenciais para mulheres que enfrentam situações de violência, independentemente do tipo, dentro do contexto brasileiro. Estamos aqui para fornecer um espaço seguro e confiável, onde as mulheres possam buscar ajuda e encontrar recursos para lidar com suas circunstâncias.
-                    </p>
-                    <p class="text-gray-600 mb-4" data-lang="en">
-                        A tool dedicated to offering support, assistance, guidance, and essential information for women facing situations of violence, regardless of type, within the Brazilian context. We are here to provide a safe and reliable space where women can seek help and find resources to deal with their circumstances.
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-purple bg-opacity-10 text-purple text-xs px-2 py-1 rounded-md">Python</span>
-                        <span class="bg-purple bg-opacity-10 text-purple text-xs px-2 py-1 rounded-md">NLP</span>
-                        <span class="bg-purple bg-opacity-10 text-purple text-xs px-2 py-1 rounded-md">Chatbot</span>
-                        <span class="bg-purple bg-opacity-10 text-purple text-xs px-2 py-1 rounded-md" data-lang="pt">Impacto Social</span>
-                        <span class="bg-purple bg-opacity-10 text-purple text-xs px-2 py-1 rounded-md" data-lang="en">Social Impact</span>
-                    </div>
-                    
-                    <a href="https://github.com/paulalcssantos/AmeliaBot" target="_blank" class="inline-flex items-center text-accent font-medium hover:underline" data-lang="pt">
-                        Ver no GitHub
-                        <i class="fas fa-external-link-alt ml-1"></i>
-                    </a>
-                    <a href="https://github.com/paulalcssantos/AmeliaBot" target="_blank" class="inline-flex items-center text-accent font-medium hover:underline" data-lang="en">
-                        View on GitHub
-                        <i class="fas fa-external-link-alt ml-1"></i>
-                    </a>
-                </div>
-                
-                <!-- IMDb Movies Rating Analysis -->
-                <div class="github-card bg-white p-6 rounded-lg shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-film text-accent text-2xl mr-3"></i>
-                        <h3 class="text-xl font-bold">IMDb Movies Rating Analysis</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4" data-lang="pt">
-                        Este projeto analisa o dataset de filmes do IMDb, destacando insights sobre filmes de 2024, cinema brasileiro e as performances de Fernanda Torres e Fernanda Montenegro.
-                    </p>
-                    <p class="text-gray-600 mb-4" data-lang="en">
-                        This project analyzes the IMDb Movies dataset, highlighting insights about 2024 films, Brazilian cinema, and the performances of Fernanda Torres and Fernanda Montenegro.
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md" data-lang="pt">Análise de Dados</span>
-                        <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md" data-lang="en">Data Analysis</span>
-                        
-                        <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md">Python</span>
-                        <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md">Pandas</span>
-                        
-                        <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md" data-lang="pt">Visualização</span>
-                        <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md" data-lang="en">Visualization</span>
-                    </div>
-                    
-                    <a href="https://github.com/paulalcssantos/IMDbMoviesRating" target="_blank" class="inline-flex items-center text-accent font-medium hover:underline" data-lang="pt">
-                        Ver no GitHub
-                        <i class="fas fa-external-link-alt ml-1"></i>
-                    </a>
-                    <a href="https://github.com/paulalcssantos/IMDbMoviesRating" target="_blank" class="inline-flex items-center text-accent font-medium hover:underline" data-lang="en">
-                        View on GitHub
-                        <i class="fas fa-external-link-alt ml-1"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contato" class="py-16 accent-gradient-bg text-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12" data-lang="pt">Entre em Contato</h2>
-        <h2 class="text-3xl font-bold text-center mb-12" data-lang="en">Contact Me</h2>
-        
-        <div class="max-w-3xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
-                    <h3 class="text-xl font-semibold mb-4" data-lang="pt">Informações de Contato</h3>
-                    <h3 class="text-xl font-semibold mb-4" data-lang="en">Contact Information</h3>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4">
-                                <i class="fas fa-envelope"></i>
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="pt">Sobre Mim</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="en">About Me</h2>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6" data-lang="pt">
+                    Com mais de 4 anos de experiência, tenho um sólido conhecimento em SQL e no desenvolvimento de relatórios dinâmicos e orientados por dados, que geram insights práticos e valiosos para apoiar a tomada de decisões.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6" data-lang="en">
+                    With over 4 years of experience, I have solid knowledge in SQL and the development of dynamic, data-driven reports that generate practical and valuable insights to support decision-making.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6" data-lang="pt">
+                    Sou formada em Ciência da Computação e especializada em Ciência de Dados, o que me proporciona uma base sólida para enfrentar desafios de negócios com dados. Além disso, sou Educadora de Tecnologia certificada pelo EducaTech da {reprograma}, o que me capacita a ensinar uma ampla gama de tópicos técnicos, ajudando indivíduos e equipes a desenvolverem as habilidades necessárias para se destacarem no mundo digital.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6" data-lang="en">
+                    I hold a degree in Computer Science and specialize in Data Science, which provides me with a solid foundation to tackle business challenges with data. Additionally, I am a certified Technology Educator through {reprograma}'s EducaTech program, which enables me to teach a wide range of technical topics, helping individuals and teams develop the skills needed to excel in the digital world.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6" data-lang="pt">
+                    Como embaixadora da WorldWide Women in Tech, tenho o compromisso de promover a diversidade e inclusão no setor de tecnologia, conectando e apoiando mulheres em suas jornadas profissionais.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6" data-lang="en">
+                    As an ambassador for WorldWide Women in Tech, I am committed to promoting diversity and inclusion in the technology sector, connecting and supporting women in their professional journeys.
+                </p>
+                <div class="mt-10">
+                    <h3 class="text-xl font-semibold mb-4 text-secondary" data-lang="pt">Áreas de Expertise:</h3>
+                    <h3 class="text-xl font-semibold mb-4 text-secondary" data-lang="en">Areas of Expertise:</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="card bg-tertiary bg-opacity-20 p-6 rounded-lg shadow-sm">
+                            <div class="text-primary text-3xl mb-4">
+                                <i class="fas fa-chart-line"></i>
                             </div>
-                            <span>email@exemplo.com</span>
+                            <h4 class="text-lg font-semibold mb-2 text-secondary" data-lang="pt">Desenvolvimento e Otimização de Relatórios</h4>
+                            <h4 class="text-lg font-semibold mb-2 text-secondary" data-lang="en">Report Development & Optimization</h4>
+                            <p class="text-gray-600" data-lang="pt">Projeto e aprimoro relatórios dinâmicos utilizando Stimulsoft, garantindo insights relevantes para cada cliente.</p>
+                            <p class="text-gray-600" data-lang="en">I design and enhance dynamic reports using Stimulsoft, ensuring relevant insights for each client.</p>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4">
-                                <i class="fas fa-phone"></i>
+                        <div class="card bg-tertiary bg-opacity-20 p-6 rounded-lg shadow-sm">
+                            <div class="text-primary text-3xl mb-4">
+                                <i class="fas fa-database"></i>
                             </div>
-                            <span>(00) 00000-0000</span>
+                            <h4 class="text-lg font-semibold mb-2 text-secondary">SQL</h4>
+                            <p class="text-gray-600" data-lang="pt">Habilidade em escrever consultas SQL otimizadas para SQL Server e Oracle SQL, garantindo integração e desempenho eficientes.</p>
+                            <p class="text-gray-600" data-lang="en">Skilled in writing optimized SQL queries for SQL Server and Oracle SQL, ensuring efficient integration and performance.</p>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4">
-                                <i class="fas fa-map-marker-alt"></i>
+                        <div class="card bg-tertiary bg-opacity-20 p-6 rounded-lg shadow-sm">
+                            <div class="text-primary text-3xl mb-4">
+                                <i class="fas fa-analytics"></i>
                             </div>
-                            <span>Brasil</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <h4 class="text-lg font-medium mb-4" data-lang="pt">Redes Sociais</h4>
-                        <h4 class="text-lg font-medium mb-4" data-lang="en">Social Media</h4>
-                        
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition-colors">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/paulalcssantos" target="_blank" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition-colors">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition-colors">
-                                <i class="fab fa-twitter"></i>
-                            </a>
+                            <h4 class="text-lg font-semibold mb-2 text-secondary" data-lang="pt">Análise de Dados</h4>
+                            <h4 class="text-lg font-semibold mb-2 text-secondary" data-lang="en">Data Analysis</h4>
+                            <p class="text-gray-600" data-lang="pt">Analiso grandes volumes de dados para identificar padrões e gerar relatórios que orientam estratégias empresariais.</p>
+                            <p class="text-gray-600" data-lang="en">I analyze large volumes of data to identify patterns and generate reports that guide business strategies.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experiencia" class="py-16 bg-tertiary bg-opacity-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="pt">Experiência Profissional</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="en">Professional Experience</h2>
+            <div class="max-w-3xl mx-auto relative">
+                <!-- Timeline line - agora visível e posicionada corretamente -->
+                <!-- Experience 1 -->
+                <div class="timeline-item relative pl-8 pb-12">
+                    <div class="timeline-dot"></div>
+                    <div class="card bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-primary" data-lang="pt">Analista e Desenvolvedora de Sistemas</h3>
+                                <h3 class="text-xl font-bold text-primary" data-lang="en">Systems Analyst & Developer</h3>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 text-sm mt-1 md:mt-0" data-lang="pt">Atual</span>
+                                <span class="text-gray-500 text-sm mt-1 md:mt-0" data-lang="en">Current</span>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-medium mb-3 text-secondary">Engeman Software de Manutenção</h4>
+                        <p class="text-gray-600 mb-4" data-lang="pt">
+                            Desenvolvo e otimizo consultas SQL e Oracle, aprimorando a performance dos bancos de dados e garantindo maior eficiência no processamento de informações. Crio relatórios dinâmicos e dashboards personalizados com Stimulsoft, transformando dados brutos em insights estratégicos.
+                        </p>
+                        <p class="text-gray-600 mb-4" data-lang="en">
+                            I develop and optimize SQL and Oracle queries, improving database performance and ensuring greater efficiency in information processing. I create dynamic reports and custom dashboards with Stimulsoft, transforming raw data into strategic insights.
+                        </p>
+                        <p class="text-gray-600" data-lang="pt">
+                            Contribuo para a personalização de telas e funcionalidades em linguagem padrão da empresa (baseada em Pascal/Delphi), tornando os sistemas mais intuitivos e alinhados às necessidades dos usuários. Também compartilho conhecimento técnico, ministrando treinamentos e workshops para equipes internas e clientes.
+                        </p>
+                        <p class="text-gray-600" data-lang="en">
+                            I contribute to the customization of screens and functionalities in the company's standard language (based on Pascal/Delphi), making systems more intuitive and aligned with user needs. I also share technical knowledge by conducting training sessions and workshops for internal teams and clients.
+                        </p>
+                    </div>
+                </div>
+                <!-- Experience 2 -->
+                <div class="timeline-item relative pl-8 pb-12">
+                    <div class="timeline-dot"></div>
+                    <div class="card bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-primary" data-lang="pt">Desenvolvedora de Software</h3>
+                                <h3 class="text-xl font-bold text-primary" data-lang="en">Software Developer</h3>
+                            </div>
+                            <span class="text-gray-500 text-sm mt-1 md:mt-0">Set 2020 - Jul 2022</span>
+                        </div>
+                        <h4 class="text-lg font-medium mb-3 text-secondary">Uaisoft Sistemas De Gestão</h4>
+                        <p class="text-gray-600 mb-4" data-lang="pt">
+                            Desenvolvi e mantive funcionalidades em sistema ERP, garantindo otimização e estabilidade do sistema para suportar operações críticas do negócio. Fui responsável pela criação de consultas complexas em SQL, extraindo dados estratégicos que apoiaram análises detalhadas e decisões gerenciais.
+                        </p>
+                        <p class="text-gray-600 mb-4" data-lang="en">
+                            I developed and maintained ERP system functionalities, ensuring system optimization and stability to support critical business operations. I was responsible for creating complex SQL queries, extracting strategic data that supported detailed analyses and management decisions.
+                        </p>
+                        <p class="text-gray-600" data-lang="pt">
+                            Atuei na identificação e resolução de problemas e bugs, assegurando a qualidade, funcionalidade e performance contínua do ERP. Além disso, criei relatórios personalizados com Stimulsoft e mantive relatórios em Crystal Reports, entregando análises precisas e consistentes.
+                        </p>
+                        <p class="text-gray-600" data-lang="en">
+                            I worked on identifying and resolving issues and bugs, ensuring the quality, functionality, and continuous performance of the ERP. Additionally, I created custom reports with Stimulsoft and maintained Crystal Reports, delivering accurate and consistent analyses.
+                        </p>
+                    </div>
+                </div>
+                <!-- Volunteer Work -->
+                <div class="timeline-item relative pl-8">
+                    <div class="timeline-dot"></div>
+                    <div class="card bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                           <div>
+                                <h3 class="text-xl font-bold text-primary" data-lang="pt">Embaixadora</h3>
+                                <h3 class="text-xl font-bold text-primary" data-lang="en">Ambassador</h3>
+                           </div>
+                           <span class="text-gray-500 text-sm mt-1 md:mt-0" data-lang="pt">Jun 2022 - Atual</span>
+                           <span class="text-gray-500 text-sm mt-1 md:mt-0" data-lang="en">Jun 2022 - Present</span>
+                        </div>
+                        <h4 class="text-lg font-medium mb-3 text-secondary">WorldWide Women in Tech</h4>
+                        <div class="mb-4">
+                            <span class="inline-block bg-purple text-white text-xs font-medium px-2.5 py-0.5 rounded-full" data-lang="pt">Trabalho Voluntário</span>
+                            <span class="inline-block bg-purple text-white text-xs font-medium px-2.5 py-0.5 rounded-full" data-lang="en">Volunteer Work</span>
+                        </div>
+                        <p class="text-gray-600 mb-4" data-lang="pt">
+                            Atuo como embaixadora voluntária na organização sem fins lucrativos WorldWide Women in Tech, participando ativamente na gestão de mídias sociais, promoção de eventos e organização de programas de mentoria.
+                        </p>
+                        <p class="text-gray-600 mb-4" data-lang="en">
+                            I serve as a volunteer ambassador for the non-profit organization WorldWide Women in Tech, actively participating in social media management, event promotion, and organizing mentorship programs.
+                        </p>
+                        <p class="text-gray-600" data-lang="pt">
+                            Responsável por conectar mentoras e mentoradas, contribuindo para o desenvolvimento profissional de mulheres em STEM (Ciência, Tecnologia, Engenharia e Matemática).
+                        </p>
+                        <p class="text-gray-600" data-lang="en">
+                            Responsible for connecting mentors and mentees, contributing to the professional development of women in STEM (Science, Technology, Engineering, and Mathematics).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="habilidades" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="pt">Habilidades Técnicas</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="en">Technical Skills</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">SQL Server</div>
+                    <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">T-SQL</div>
+                    <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">PL/SQL</div>
+                    <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">Stimulsoft</div>
+                    <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">Python</div>
+                    <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">C#</div>
+                    <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center">Power BI</div>
+                    <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center" data-lang="pt">Análise de Dados</div>
+                    <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center" data-lang="en">Data Analysis</div>
+                    <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center" data-lang="pt">Visualização de Dados</div>
+                    <div class="skill-pill bg-tertiary text-primary font-medium px-4 py-3 rounded-full text-center" data-lang="en">Data Visualization</div>
+                </div>
+                <div class="mt-12">
+                    <h3 class="text-xl font-semibold mb-6 text-center text-secondary" data-lang="pt">Níveis de Proficiência</h3>
+                    <h3 class="text-xl font-semibold mb-6 text-center text-secondary" data-lang="en">Proficiency Levels</h3>
+                    <div class="space-y-6 max-w-xl mx-auto">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">SQL (T-SQL, PL/SQL)</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Stimulsoft</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium" data-lang="pt">Análise de Dados</span>
+                                <span class="font-medium" data-lang="en">Data Analysis</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Power BI</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Python</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <h3 class="text-xl font-semibold mb-6 text-center text-secondary" data-lang="pt">Idiomas</h3>
+                    <h3 class="text-xl font-semibold mb-6 text-center text-secondary" data-lang="en">Languages</h3>
+                    <div class="flex flex-col items-center space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="font-medium" data-lang="pt">Português:</span>
+                            <span class="font-medium" data-lang="en">Portuguese:</span>
+                            <div class="flex text-secondary">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600" data-lang="pt">(Nativo)</span>
+                            <span class="text-gray-600" data-lang="en">(Native)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="font-medium" data-lang="pt">Inglês:</span>
+                            <span class="font-medium" data-lang="en">English:</span>
+                            <div class="flex text-secondary">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600" data-lang="pt">(Intermediário)</span>
+                            <span class="text-gray-600" data-lang="en">(Intermediate)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projetos" class="py-16 bg-tertiary bg-opacity-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="pt">Projetos & Iniciativas</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="en">Projects & Initiatives</h2>
+            <div class="max-w-3xl mx-auto">
+                <!-- Newsletter Card -->
+                <div class="newsletter-card rounded-xl overflow-hidden shadow-lg mb-12">
+                    <div class="p-8 text-white">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4">
+                                <i class="fas fa-newspaper text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">Vozes e Dados</h3>
+                                <p class="text-white text-opacity-80" data-lang="pt">Newsletter Mensal no LinkedIn</p>
+                                <p class="text-white text-opacity-80" data-lang="en">Monthly LinkedIn Newsletter</p>
+                            </div>
+                        </div>
+                        <p class="mb-6 text-lg" data-lang="pt">
+                            Uma newsletter mensal sobre dados, diversidade, histórias inspiradoras e insights do universo tech.
+                        </p>
+                        <p class="mb-6 text-lg" data-lang="en">
+                            A monthly newsletter about data, diversity, inspiring stories, and insights from the tech universe.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="pt">Dados</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="en">Data</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="pt">Diversidade</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="en">Diversity</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Tech</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="pt">Carreira</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm" data-lang="en">Career</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center bg-white text-purple font-medium px-5 py-2 rounded-full hover:bg-opacity-90 transition-colors" data-lang="pt">
+                            Assinar Newsletter
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#" class="inline-flex items-center bg-white text-purple font-medium px-5 py-2 rounded-full hover:bg-opacity-90 transition-colors" data-lang="en">
+                            Subscribe to Newsletter
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Women in Tech Initiative -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 mb-12">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-purple bg-opacity-20 flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-purple text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">WorldWide Women in Tech</h3>
+                                <p class="text-gray-500" data-lang="pt">Programa de Mentoria</p>
+                                <p class="text-gray-500" data-lang="en">Mentorship Program</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-lang="pt">
+                            Como embaixadora da WWWiT, ajudo a conectar mulheres em tecnologia com mentoras experientes, 
+                            criando oportunidades de crescimento profissional e desenvolvimento de carreira.
+                        </p>
+                        <p class="text-gray-600 mb-6" data-lang="en">
+                            As a WWWiT ambassador, I help connect women in technology with experienced mentors, 
+                            creating opportunities for professional growth and career development.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-tertiary bg-opacity-20 p-4 rounded-lg text-center">
+                                <div class="text-purple text-2xl font-bold mb-1">20+</div>
+                                <div class="text-gray-500 text-sm" data-lang="pt">Mentorias Realizadas</div>
+                                <div class="text-gray-500 text-sm" data-lang="en">Mentorships Completed</div>
+                            </div>
+                            <div class="bg-tertiary bg-opacity-20 p-4 rounded-lg text-center">
+                                <div class="text-purple text-2xl font-bold mb-1">5</div>
+                                <div class="text-gray-500 text-sm" data-lang="pt">Eventos Organizados</div>
+                                <div class="text-gray-500 text-sm" data-lang="en">Events Organized</div>
+                            </div>
+                            <div class="bg-tertiary bg-opacity-20 p-4 rounded-lg text-center">
+                                <div class="text-purple text-2xl font-bold mb-1">100+</div>
+                                <div class="text-gray-500 text-sm" data-lang="pt">Mulheres Impactadas</div>
+                                <div class="text-gray-500 text-sm" data-lang="en">Women Impacted</div>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-purple font-medium hover:underline" data-lang="pt">
+                            Saiba mais sobre o programa
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#" class="inline-flex items-center text-purple font-medium hover:underline" data-lang="en">
+                            Learn more about the program
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Projects Section -->
+    <section id="github" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="pt">Projetos no GitHub</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-lang="en">GitHub Projects</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="flex justify-center mb-8">
+                    <a href="https://github.com/paulalcssantos" target="_blank" class="flex items-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                        <i class="fab fa-github text-xl mr-2"></i>
+                        <span>github.com/paulalcssantos</span>
+                    </a>
+                </div>
+                <div class="space-y-8">
+                    <!-- AmeliaBot -->
+                    <div class="github-card bg-tertiary bg-opacity-20 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-robot text-purple text-2xl mr-3"></i>
+                            <h3 class="text-xl font-bold text-secondary">AmeliaBot</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4" data-lang="pt">
+                            Ferramenta dedicada a oferecer apoio, assistência, orientação e informações essenciais para mulheres que enfrentam situações de violência, independentemente do tipo, dentro do contexto brasileiro. Estamos aqui para fornecer um espaço seguro e confiável, onde as mulheres possam buscar ajuda e encontrar recursos para lidar com suas circunstâncias.
+                        </p>
+                        <p class="text-gray-600 mb-4" data-lang="en">
+                            A tool dedicated to offering support, assistance, guidance, and essential information for women facing situations of violence, regardless of type, within the Brazilian context. We are here to provide a safe and reliable space where women can seek help and find resources to deal with their circumstances.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple bg-opacity-10 text-purple text-xs px-2 py-1 rounded-md">Python</span>
+                            <span class="bg-purple bg-opacity-10 text-purple text-xs px-2 py-1 rounded-md">NLP</span>
+                            <span class="bg-purple bg-opacity-10 text-purple text-xs px-2 py-1 rounded-md">Chatbot</span>
+                            <span class="bg-purple bg-opacity-10 text-purple text-xs px-2 py-1 rounded-md" data-lang="pt">Impacto Social</span>
+                            <span class="bg-purple bg-opacity-10 text-purple text-xs px-2 py-1 rounded-md" data-lang="en">Social Impact</span>
+                        </div>
+                        <a href="https://github.com/paulalcssantos/AmeliaBot" target="_blank" class="inline-flex items-center text-accent font-medium hover:underline" data-lang="pt">
+                            Ver no GitHub
+                            <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+                        </a>
+                        <a href="https://github.com/paulalcssantos/AmeliaBot" target="_blank" class="inline-flex items-center text-accent font-medium hover:underline" data-lang="en">
+                            View on GitHub
+                            <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                    <!-- IMDb Movies Rating Analysis -->
+                    <div class="github-card bg-tertiary bg-opacity-20 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-film text-accent text-2xl mr-3"></i>
+                            <h3 class="text-xl font-bold text-secondary">IMDb Movies Rating Analysis</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4" data-lang="pt">
+                            Este projeto analisa o dataset de filmes do IMDb, destacando insights sobre filmes de 2024, cinema brasileiro e as performances de Fernanda Torres e Fernanda Montenegro.
+                        </p>
+                        <p class="text-gray-600 mb-4" data-lang="en">
+                            This project analyzes the IMDb Movies dataset, highlighting insights about 2024 films, Brazilian cinema, and the performances of Fernanda Torres and Fernanda Montenegro.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md" data-lang="pt">Análise de Dados</span>
+                            <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md" data-lang="en">Data Analysis</span>
+                            <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md">Python</span>
+                            <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md">Pandas</span>
+                            <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md" data-lang="pt">Visualização</span>
+                            <span class="bg-accent bg-opacity-10 text-accent text-xs px-2 py-1 rounded-md" data-lang="en">Visualization</span>
+                        </div>
+                        <a href="https://github.com/paulalcssantos/IMDbMoviesRating" target="_blank" class="inline-flex items-center text-accent font-medium hover:underline" data-lang="pt">
+                            Ver no GitHub
+                            <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+                        </a>
+                        <a href="https://github.com/paulalcssantos/IMDbMoviesRating" target="_blank" class="inline-flex items-center text-accent font-medium hover:underline" data-lang="en">
+                            View on GitHub
+                            <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 accent-gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-lang="pt">Entre em Contato</h2>
+            <h2 class="text-3xl font-bold text-center mb-12" data-lang="en">Contact Me</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
+                        <h3 class="text-xl font-semibold mb-4" data-lang="pt">Informações de Contato</h3>
+                        <h3 class="text-xl font-semibold mb-4" data-lang="en">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <span>email@exemplo.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <span>(00) 00000-0000</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <span>Brasil</span>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-lg font-medium mb-4" data-lang="pt">Redes Sociais</h4>
+                            <h4 class="text-lg font-medium mb-4" data-lang="en">Social Media</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition-colors">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/paulalcssantos" target="_blank" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition-colors">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
+                        <h3 class="text-xl font-semibold mb-4" data-lang="pt">Envie uma Mensagem</h3>
+                        <h3 class="text-xl font-semibold mb-4" data-lang="en">Send a Message</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block mb-1" data-lang="pt">Nome</label>
+                                <label for="name" class="block mb-1" data-lang="en">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-transparent focus:border-white focus:bg-opacity-30 focus:outline-none focus:ring-0 transition-colors" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-transparent focus:border-white focus:bg-opacity-30 focus:outline-none focus:ring-0 transition-colors" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block mb-1" data-lang="pt">Mensagem</label>
+                                <label for="message" class="block mb-1" data-lang="en">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-transparent focus:border-white focus:bg-opacity-30 focus:outline-none focus:ring-0 transition-colors" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-white text-accent font-medium px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors" data-lang="pt">Enviar Mensagem</button>
+                            <button type="submit" class="w-full bg-white text-accent font-medium px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors" data-lang="en">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-2xl font-bold">Paula<span class="text-tertiary">.dev</span></a>
+                </div>
+                <div class="text-center md:text-right">
+                    <p>© 2024 Paula Luiza. <span data-lang="pt">Todos os direitos reservados.</span><span data-lang="en">All rights reserved.</span></p>
+                    <p class="text-tertiary text-sm mt-1" data-lang="pt">Desenvolvedora SQL & Análise de Dados | Embaixadora WWWiT</p>
+                    <p class="text-tertiary text-sm mt-1" data-lang="en">SQL Developer & Data Analytics | WWWiT Ambassador</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SEU JAVASCRIPT, AGORA NO LUGAR CORRETO -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Contact form submission
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const isEnglish = document.documentElement.classList.contains('lang-en');
+                    
+                    if (isEnglish) {
+                        alert(`Thank you ${name}! Your message has been sent successfully. I will contact you soon.`);
+                    } else {
+                        alert(`Obrigado ${name}! Sua mensagem foi enviada com sucesso. Entrarei em contato em breve.`);
+                    }
+                    
+                    contactForm.reset();
+                });
+            }
+
+            // Language toggle functionality
+            const languageToggles = document.querySelectorAll('.language-switch');
+
+            function toggleLanguage() {
+                // É mais correto semanticamente aplicar a classe de idioma à tag <html>
+                document.documentElement.classList.toggle('lang-en');
                 
-                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
-                    <h3 class="text-xl font-semibold mb-4" data-lang="pt">Envie uma Mensagem</h3>
-                    <h3 class="text-xl font-semibold mb-4" data-lang="en">Send a Message</h3>
-                    
-                    <form id="contact-form" class="space-y-4">
-                        <div>
-                            <label for="name" class="block mb-1" data-lang="pt">Nome</label>
-                            <label for="name" class="block mb-1" data-lang="en">Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block mb-1">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" required>
-                        </div>
-                        <div>
-                            <label for="message" class="block mb-1" data-lang="pt">Mensagem</label>
-                            <label for="message" class="block mb-1" data-lang="en">Message</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" required></textarea>
-                        </div>
-                        <button type="submit" class="bg-white text-accent font-medium px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors" data-lang="pt">Enviar Mensagem</button>
-                        <button type="submit" class="bg-white text-accent font-medium px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors" data-lang="en">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                const isEnglish = document.documentElement.classList.contains('lang-en');
+                localStorage.setItem('language', isEnglish ? 'en' : 'pt');
+            }
 
-<!-- Footer -->
-<footer class="bg-primary text-white py-8">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <a href="#" class="text-2xl font-bold">Paula<span class="text-tertiary">.dev</span></a>
-            </div>
-            <div class="text-center md:text-right">
-                <p>&copy; 2023 Paula Luiza. <span data-lang="pt">Todos os direitos reservados.</span><span data-lang="en">All rights reserved.</span></p>
-                <p class="text-tertiary text-sm mt-1" data-lang="pt">Desenvolvedora SQL & Análise de Dados | Embaixadora WWWiT</p>
-                <p class="text-tertiary text-sm mt-1" data-lang="en">SQL Developer & Data Analytics | WWWiT Ambassador</p>
-            </div>
-        </div>
-    </div>
-</footer>
+            languageToggles.forEach(toggle => {
+                toggle.addEventListener('click', toggleLanguage);
+            });
 
-<script>
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-    
-    // Close mobile menu when clicking on a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
+            // Check for saved language preference on page load
+            const savedLanguage = localStorage.getItem('language');
+            if (savedLanguage === 'en') {
+                if (!document.documentElement.classList.contains('lang-en')) {
+                    document.documentElement.classList.add('lang-en');
+                }
+            } else {
+                 if (document.documentElement.classList.contains('lang-en')) {
+                    document.documentElement.classList.remove('lang-en');
+                }
+            }
         });
-    });
-    
-    // Contact form submission
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        // Get current language
-        const isEnglish = document.body.classList.contains('lang-en');
-        
-        // Show appropriate message based on language
-        if (isEnglish) {
-            alert(`Thank you ${name}! Your message has been sent successfully. I will contact you soon.`);
-        } else {
-            alert(`Obrigado ${name}! Sua mensagem foi enviada com sucesso. Entrarei em contato em breve.`);
-        }
-        
-        // Reset form
-        contactForm.reset();
-    });
-    
-    // Language toggle functionality
-    const languageToggle = document.getElementById('language-toggle');
-    const languageToggleMobile = document.getElementById('language-toggle-mobile');
-    
-    function toggleLanguage() {
-        document.body.classList.toggle('lang-en');
-        
-        // Save language preference
-        const isEnglish = document.body.classList.contains('lang-en');
-        localStorage.setItem('language', isEnglish ? 'en' : 'pt');
-    }
-    
-    languageToggle.addEventListener('click', toggleLanguage);
-    languageToggleMobile.addEventListener('click', toggleLanguage);
-    
-    // Check for saved language preference
-    document.addEventListener('DOMContentLoaded', () => {
-        const savedLanguage = localStorage.getItem('language');
-        if (savedLanguage === 'en') {
-            document.body.classList.add('lang-en');
-        }
-    });
-</script>
+    </script>
+
+</body>
+</html>
