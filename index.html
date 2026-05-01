@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paula Luiza | Data & SQL | Community Leader</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: ['Outfit', 'sans-serif'],
+                serif: ['Playfair Display', 'serif'],
+              },
+              colors: {
+                autumn: {
+                  50: '#fdfaf7', 100: '#f9f1e6', 200: '#f2e3cd', 300: '#e5ccaa',
+                  400: '#d4ae7c', 500: '#c59458', 600: '#b47d47', 700: '#96663c',
+                  800: '#7a5435', 900: '#64452e', 950: '#422d1e',
+                },
+                terracotta: '#c35c3c',
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-autumn-50 text-autumn-950 font-sans selection:bg-autumn-200 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-autumn-950 h-20 flex items-center justify-between px-6 md:px-12 shadow-2xl">
+        
+        <!-- Lado Esquerdo: -->
+        <a href="#hero" class="flex items-center gap-4 group">
+            <div class="w-10 h-10 bg-white border-2 border-autumn-100 rounded overflow-hidden flex items-center justify-center rotate-3 shadow-lg group-hover:rotate-0 transition-transform">
+                <img src="assets/img/Foto Perfil.jpg" alt="Paula Luiza" class="w-full h-full">
+            </div>
+            <div class="flex flex-col leading-none">
+                <span class="font-sans text-xl font-black tracking-tighter text-white uppercase border-b-2 border-terracotta">Paula Luiza</span>
+                <span class="text-[9px] uppercase tracking-widest font-bold text-autumn-400 mt-1">Minas Gerais • Brasil</span>
+            </div>
+        </a>
+        
+        <!-- Lado Direito: -->
+        <div class="flex items-center gap-6">
+            <!-- Menu de Links -->
+            <ul id="nav-links" class="hidden lg:flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0 lg:left-auto w-full lg:w-auto bg-autumn-950 lg:bg-transparent p-6 lg:p-0 items-center gap-8 text-[11px] font-black uppercase tracking-widest text-autumn-100 border-b lg:border-none border-autumn-800">
+                <li><a href="#about" data-t="nav.about" class="hover:text-terracotta transition-colors">Sobre</a></li>
+                <li><a href="#skills" data-t="nav.skills" class="hover:text-terracotta transition-colors">Habilidades</a></li>
+                <li><a href="#journey" data-t="nav.experience" class="hover:text-terracotta transition-colors">Trajetória</a></li>
+                <li><a href="#classes" data-t="mediaSection.classesTitle" class="hover:text-terracotta transition-colors">Aulas</a></li>
+                <li><a href="#lectures" data-t="mediaSection.lecturesTitle" class="hover:text-terracotta transition-colors">Palestras</a></li>
+                <li><a href="#newsletter" data-t="newsletterSection.title" class="hover:text-terracotta transition-colors">Newsletter</a></li>
+                <li><a href="#contact" data-t="hero.cta" class="hover:text-terracotta text-autumn-400 transition-colors">Contato</a></li>
+            </ul>
+            
+            <!-- Ícone Hambúrguer  -->
+            <button id="mobile-menu-btn" class="lg:hidden text-autumn-100 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <button id="lang-toggle" class="px-3 py-1.5 rounded-full bg-terracotta text-white text-[10px] font-black uppercase tracking-widest hover:scale-105 transition-all order-2">EN</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="hero" class="min-h-screen bg-autumn-950 flex items-center pt-20 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="reveal active">
+                <h1 class="text-7xl md:text-8xl font-serif text-white mb-4 leading-none tracking-tighter">Paula Luiza</h1>
+                <p class="text-autumn-400 font-bold tracking-[0.3em] text-xs uppercase mb-6" data-t="hero.roleDescription"></p>
+                <p class="text-xl text-autumn-100 font-light max-w-lg mb-10 leading-relaxed" data-t="hero.subtitle"></p>
+                <div class="flex gap-4">
+                     <a href="#contact" class="inline-flex items-center gap-4 bg-terracotta px-10 py-5 text-white font-black uppercase text-xs tracking-widest hover:bg-autumn-600 transition-all shadow-2xl rounded-lg" data-t="hero.cta"></a>
+                </div>
+            </div>
+            <div class="relative flex justify-center reveal active">
+                <div class="w-72 h-96 md:w-[350px] md:h-[500px] bg-autumn-800 rounded-2xl overflow-hidden border-4 border-autumn-700 shadow-2xl rotate-3">
+                    <img src="assets/img/Foto Perfil Grande.jpg" alt="Paula Luiza" class="w-full h-full">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="py-24 px-6 bg-autumn-50">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <span class="text-terracotta font-black uppercase tracking-[0.3em] text-[10px] mb-8 block" data-t="nav.about"></span>
+            <p class="text-2xl md:text-2xl font-light text-autumn-950 leading-relaxed" data-t="about.summary"></p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-24 px-6 bg-autumn-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-5xl font-serif text-autumn-950" data-t="skills.techTitle"></h2>
+            </div>
+            <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal"></div>
+        </div>
+    </section>
+
+    <!-- Journey -->
+    <section id="journey" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
+                <div>
+                    <h2 class="text-5xl font-serif text-autumn-950 tracking-tighter" data-t="experienceSection.title"></h2>
+                </div>
+                <div class="flex flex-wrap gap-2 bg-autumn-50 p-2 rounded-xl border border-autumn-200">
+                    <button data-tab="work" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all bg-autumn-950 text-white rounded-lg">Profissional</button>
+                    <button data-tab="voluntary" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all text-autumn-600">Voluntária</button>
+                    <button data-tab="international" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all text-autumn-600">Internacional</button>
+                </div>
+            </div>
+            <div id="experience-container" class="grid gap-6 reveal"></div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="py-24 px-6 bg-autumn-50">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center reveal">
+            <div>
+                <h2 class="text-5xl font-serif text-autumn-950 mb-8" data-t="educationSection.title"></h2>
+                <div id="education-items" class="space-y-12"></div>
+            </div>
+            <div class="bg-autumn-950 p-12 rounded-[3rem] border border-autumn-300">
+                <i data-lucide="graduation-cap" class="w-16 h-16 text-autumn-500 mb-6"></i>
+                <p class="text-autumn-100 italic" data-t="educationSection.quote"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes -->
+    <section id="classes" class="py-24 px-6 bg-autumn-950">
+        <div class="max-w-7xl mx-auto">
+            <!-- Cabeçalho da Seção -->
+            <div class="mb-16">
+                <h2 class="text-5xl font-serif text-autumn-100 mb-4 text-center" data-t="mediaSection.classesTitle">Aulas & Treinamentos</h2>
+                <p id="classes-intro" class="opacity-95 text-lg font-light text-center text-autumn-300" data-t="mediaSection.classesIntro"></p>
+            </div>
+            
+            <!-- O "Mural" de Aulas e Feedbacks -->
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Lado Esquerdo: As 4 Aulas (Grid 2x2 Simétrico) -->
+                <div id="media-classes-grid" class="lg:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                
+                <!-- Lado Direito: Feedbacks (Mural Estilo Pinterest/Masonry) -->
+                <div class="lg:w-1/3">
+                    <div class="bg-autumn-900/50 p-4 rounded-[2rem] border border-autumn-300">
+                        <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-autumn-200 mb-8 text-center" data-t="mediaSection.feedbackTitle">Reconhecimento</h3>
+                        <div id="feedback-column" class="flex flex-col gap-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lectures -->
+    <section id="lectures" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto reveal">
+            <h2 class="text-5xl font-serif text-autumn-950 mb-16 text-center" data-t="mediaSection.lecturesTitle"></h2>
+            <div id="media-lectures" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+        </div>
+    </section>
+
+    <!-- Book -->
+    <section class="py-24 bg-autumn-950 text-white overflow-hidden reveal">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <span class="text-autumn-400 font-bold tracking-[0.3em] text-[12px] uppercase mb-4 block" data-t="about.bookStatus"></span>
+                <h2 class="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight" data-t="about.bookTitle"></h2>
+                <p id="book-description" class="text-autumn-200 text-xl leading-relaxed mb-8" data-t="about.bookDesc"></p>
+            </div>
+            <div class="relative group">
+                <img src="assets/img/livro.jpg" alt="Book Cover" class="relative rounded-lg shadow-2xl transition-all group-hover:scale-105">
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Project -->
+    <section id="upcoming" class="py-24 px-6 bg-autumn-50">
+        <div id="upcoming-project-data" class="max-w-7xl mx-auto bg-terracotta rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl reveal"></div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter" class="py-24 px-6 bg-autumn-100">
+        <div class="max-w-7xl mx-auto reveal">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-serif text-autumn-950 uppercase mb-4" data-t="newsletterSection.title"></h2>
+                <p id="newsletter-intro" class="max-w-2xl mx-auto text-autumn-700" data-t="newsletterSection.intro"></p>
+            </div>
+            <div id="newsletter-editions" class="grid md:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-autumn-950 py-10 px-6 text-autumn-100">
+          <div class="max-w-2xl mx-auto">
+            <!-- Card Centralizado -->
+            <div class="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 md:p-16 text-center reveal">
+                <span class="text-autumn-400 uppercase font-sans font-bold tracking-[0.3em] text-2xl mb-6 block" data-t="footer.contactLabel">Vamos Conversar?</span>
+                
+                <!-- Botões de Ação Direta -->
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                    <a href="mailto:paulalcssantos@gmail.com" class="bg-terracotta text-white px-8 py-4 rounded-xl font-bold lowercase text-[13px] tracking-widest hover:bg-white hover:text-autumn-950 transition-all shadow-xl" >paulalcssantos@gmail.com</a>
+                    
+                    <div class="flex gap-4">
+                        <a href="https://linkedin.com/in/paulalcssantos" target="_blank" class="w-12 h-12 rounded-xl border border-white/10 flex items-center justify-center text-lg hover:bg-terracotta hover:text-white transition-all">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/paulalcssantos" target="_blank" class="w-12 h-12 rounded-xl border border-white/10 flex items-center justify-center text-lg hover:bg-terracotta hover:text-white transition-all">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Links Rápidos e Copyright (Linha Única) -->
+            <div class="mt-16 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-widest opacity-80">
+                <div class="flex gap-8">
+                    <a href="#about" class="hover:text-terracotta transition-colors" data-t="nav.about"></a>
+                    <a href="#skills" class="hover:text-terracotta transition-colors">Skills</a>
+                    <a href="#journey" class="hover:text-terracotta transition-colors" data-t="experienceSection.title"></a>                    
+                </div>
+                <p>&copy; 2026 PAULA LUIZA • <span data-t="footer.copy">Todos os direitos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+        // Reveal animation logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

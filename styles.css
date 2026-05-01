@@ -1,0 +1,114 @@
+/* Custom resets and behaviors */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Autumn Palette Variables (Already used via tailwind in index, but defined for reference) */
+:root {
+    --terracotta: #c35c3c;
+    --autumn-50: #fdfaf7;
+    --autumn-100: #f9f1e6;
+    --autumn-200: #f2e3cd;
+    --autumn-300: #e5ccaa;
+    --autumn-400: #d4ae7c; 
+    --autumn-500: #c59458; 
+    --autumn-600: #b47d47; 
+    --autumn-700: #96663c;
+    --autumn-800: #7a5435;
+    --autumn-900: #64452e; 
+    --autumn-950: #422d1e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Custom classes for the tabs */
+.tab-btn {
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    color: #422d1e;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fdfaf7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c59458;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c35c3c;
+}
+
+/* Efeito de "Mural" para os feedbacks */
+#feedback-column {
+    /* Faz as imagens aparecerem suavemente */
+    animation: fadeIn 1s ease;
+}
+
+.feedback-card {
+    /* Cria um leve efeito de profundidade */
+    box-shadow: 0 10px 15px -3px rgba(66, 45, 30, 0.05);
+}
+
+/* Tratamento para o feedback longo não "quebrar" o layout */
+#feedback-column img {
+    display: block;
+    max-height: 500px; /* Limita a altura máxima para não ficar infinito */
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Estilo para as legendas das aulas */
+.section-title-polish {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: var(--terracotta);
+    color: white;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border-radius: 4px;
+}
+
+/* Transição suave nas seções */
+section {
+    transition: background-color 0.5s ease;
+}
+
+/* Quando o menu mobile estiver ativo */
+#nav-links.active {
+    display: flex !important; /* Força a aparecer */
+    animation: fadeInDown 0.3s ease-out;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajuste para o botão de menu mobile não ter outline feio */
+#mobile-menu-btn:focus {
+    outline: none;
+}
