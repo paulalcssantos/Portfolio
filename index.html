@@ -79,17 +79,20 @@
     <!-- Hero -->
     <header id="hero" class="min-h-screen bg-autumn-950 flex items-center pt-20 px-6 relative overflow-hidden">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div class="reveal active">
-                <h1 class="text-7xl md:text-8xl font-serif text-white mb-4 leading-none tracking-tighter">Paula Luiza</h1>
+            <div class="reveal active text-center md:text-left">
+                <h1 class="text-6xl md:text-8xl font-serif text-white mb-4 leading-none tracking-tighter">Paula Luiza</h1>
                 <p class="text-autumn-400 font-bold tracking-[0.3em] text-xs uppercase mb-6" data-t="hero.roleDescription"></p>
-                <p class="text-xl text-autumn-100 font-light max-w-lg mb-10 leading-relaxed" data-t="hero.subtitle"></p>
-                <div class="flex gap-4">
-                     <a href="#contact" class="inline-flex items-center gap-4 bg-terracotta px-10 py-5 text-white font-black uppercase text-xs tracking-widest hover:bg-autumn-600 transition-all shadow-2xl rounded-lg" data-t="hero.cta"></a>
+                
+                <p class="text-xl text-autumn-100 font-light max-w-lg mb-10 leading-relaxed mx-auto md:mx-0" data-t="hero.subtitle"></p>
+            
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="inline-flex items-center gap-4 bg-terracotta px-10 py-5 text-white font-black uppercase text-xs tracking-widest hover:bg-autumn-600 transition-all shadow-2xl rounded-lg" data-t="hero.cta"></a>
                 </div>
             </div>
+            
             <div class="relative flex justify-center reveal active">
-                <div class="w-72 h-96 md:w-[350px] md:h-[500px] bg-autumn-800 rounded-2xl overflow-hidden border-4 border-autumn-700 shadow-2xl rotate-3">
-                    <img src="assets/img/Foto Perfil Grande.jpg" alt="Paula Luiza" class="w-full h-full">
+                <div class="w-full max-w-[280px] md:max-w-[400px] h-auto bg-autumn-800 rounded-2xl overflow-hidden border-4 border-autumn-700 shadow-2xl rotate-0 md:rotate-3 transition-all duration-500">
+                    <img src="assets/img/Foto Perfil Grande.jpg" alt="Paula Luiza" class="w-full h-auto block">
                 </div>
             </div>
         </div>
@@ -116,19 +119,20 @@
     <!-- Journey -->
     <section id="journey" class="py-24 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-8 reveal">
                 <div>
-                    <h2 class="text-5xl font-serif text-autumn-950 tracking-tighter" data-t="experienceSection.title"></h2>
+                     <h2 class="text-5xl font-serif text-autumn-950 tracking-tighter text-center md:text-left" data-t="experienceSection.title"></h2>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2 bg-autumn-50 p-2 rounded-xl border border-autumn-200 justify-center md:justify-start">
+                        <button data-tab="work" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all bg-autumn-950 text-white rounded-lg">Profissional</button>
+                        <button data-tab="voluntary" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all text-autumn-600">Voluntária</button>
+                        <button data-tab="international" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all text-autumn-600">Internacional</button>
+                    </div>
                 </div>
-                <div class="flex flex-wrap gap-2 bg-autumn-50 p-2 rounded-xl border border-autumn-200">
-                    <button data-tab="work" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all bg-autumn-950 text-white rounded-lg">Profissional</button>
-                    <button data-tab="voluntary" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all text-autumn-600">Voluntária</button>
-                    <button data-tab="international" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all text-autumn-600">Internacional</button>
-                </div>
+                <div id="experience-container" class="grid gap-6 reveal"></div>
             </div>
-            <div id="experience-container" class="grid gap-6 reveal"></div>
-        </div>
-    </section>
+        </section>
 
     <!-- Education -->
     <section id="education" class="py-24 px-6 bg-autumn-50">

@@ -152,7 +152,7 @@ const en = {
         }
     },
     experienceSection: {
-        title: 'Career Path',
+        title: 'Journey',
         work: [
             { role: 'Systems & Development Analyst', 
                 company: 'Engeman Software de Manutenção', 
@@ -366,7 +366,7 @@ function renderMedia() {
     </div>
 `).join('');
 
-    // 2. Renderiza os Feedbacks (Com o feedback longo fluindo naturalmente)
+    // 2. Renderiza os Feedbacks 
     document.getElementById('feedback-column').innerHTML = media.feedbacks.map((f, index) => `
         <div class="feedback-card bg-white p-2 rounded-2xl shadow-md border border-white hover:scale-105  transition-all">
             <img src="${f}" class="w-full h-auto rounded-xl" alt="Feedback de aluno">
@@ -443,29 +443,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 b.classList.add('text-autumn-600');
             });
             e.target.classList.add('bg-autumn-950', 'text-white');
-            //renderExperience(e.target.getAttribute('data-tab'));
             renderExperience(currentTab); 
         });
     });
     
 });
 
-// Lógica do Menu Mobile
 const menuBtn = document.getElementById('mobile-menu-btn');
 const navLinks = document.getElementById('nav-links');
 
 if (menuBtn && navLinks) {
     menuBtn.addEventListener('click', () => {
-        // Toggle das classes do Tailwind
         if (navLinks.classList.contains('hidden')) {
             navLinks.classList.remove('hidden');
-            navLinks.classList.add('flex'); // Mostra o menu
+            navLinks.classList.add('flex'); 
         } else {
             navLinks.classList.add('hidden');
-            navLinks.classList.remove('flex'); // Esconde o menu
+            navLinks.classList.remove('flex'); 
         }
         
-        // Troca do ícone (Bars / Times)
         const icon = menuBtn.querySelector('i');
         if (icon) {
             icon.classList.toggle('fa-bars');
@@ -473,7 +469,6 @@ if (menuBtn && navLinks) {
         }
     });
 
-    // Fecha o menu ao clicar em qualquer link
     const links = navLinks.querySelectorAll('a');
     links.forEach(link => {
         link.addEventListener('click', () => {

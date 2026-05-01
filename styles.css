@@ -33,7 +33,6 @@ body {
     animation: fadeIn 0.8s ease forwards;
 }
 
-/* Custom classes for the tabs */
 .tab-btn {
     transition: all 0.3s ease;
 }
@@ -42,7 +41,6 @@ body {
     color: #422d1e;
 }
 
-/* Scrollbar styling */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -60,26 +58,22 @@ body {
     background: #c35c3c;
 }
 
-/* Efeito de "Mural" para os feedbacks */
+
 #feedback-column {
-    /* Faz as imagens aparecerem suavemente */
     animation: fadeIn 1s ease;
 }
 
 .feedback-card {
-    /* Cria um leve efeito de profundidade */
     box-shadow: 0 10px 15px -3px rgba(66, 45, 30, 0.05);
 }
 
-/* Tratamento para o feedback longo não "quebrar" o layout */
 #feedback-column img {
     display: block;
-    max-height: 500px; /* Limita a altura máxima para não ficar infinito */
+    max-height: 500px; 
     object-fit: cover;
     width: 100%;
 }
 
-/* Estilo para as legendas das aulas */
 .section-title-polish {
     display: inline-block;
     padding: 4px 12px;
@@ -92,14 +86,12 @@ body {
     border-radius: 4px;
 }
 
-/* Transição suave nas seções */
 section {
     transition: background-color 0.5s ease;
 }
 
-/* Quando o menu mobile estiver ativo */
 #nav-links.active {
-    display: flex !important; /* Força a aparecer */
+    display: flex !important; 
     animation: fadeInDown 0.3s ease-out;
 }
 
@@ -108,7 +100,6 @@ section {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Ajuste para o botão de menu mobile não ter outline feio */
 #mobile-menu-btn:focus {
     outline: none;
 }
