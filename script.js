@@ -139,7 +139,7 @@ const en = {
     skills: { 
         techTitle: 'Hard Skills', 
         categories: {
-            lang: 'Languages',
+            lang: 'Code Languages',
             db: 'Databases',
             tools: 'Data Visualization ',
             idioms: 'Languages'
