@@ -5,8 +5,17 @@ const pt = {
         subtitle: 'Cientista da Computação apaixonada por transformar dados em decisões estratégicas, pela educação e por abrir caminhos para mulheres na tecnologia.', 
         cta: 'Contato' 
     },
+    metrics: {
+        title: 'Impacto',
+        years: 'anos com dados',
+        sqlMain: 'de redução no tempo de execução de consultas SQL',
+        sqlDetail: '(de 50 minutos para 5 segundos em consultas críticas)',
+        classes: 'aulas e treinamentos',
+        mentoring: 'coordenação de programas de mentoria com mais de cem participantes',
+        community: 'gestão de comunidade com mais de quatrocentas mulheres'
+    },
     about: { 
-        summary: 'Trabalho com dados há mais de 5 anos, com foco em SQL, otimização de performance e construção de análises que apoiam decisões. Já atuei na melhoria de consultas complexas, alcançando reduções de até 99% no tempo de execução, tornando processos mais eficientes e confiáveis. Além do lado técnico, carrego um propósito muito forte na educação e no apoio a outras mulheres.', 
+        summary: 'Trabalho com dados há mais de 5 anos, atuando na construção de análises e na melhoria de processos que apoiam a tomada de decisão. Tenho experiência com otimização de consultas SQL e desenvolvimento de soluções voltadas para performance e confiabilidade de dados em ambientes corporativos. Além da atuação técnica, participo ativamente de iniciativas ligadas à educação e à comunidade, contribuindo com formação, mentoria e criação de conteúdos na área de tecnologia, com foco em ampliar o acesso e o desenvolvimento de outras mulheres na área.', 
         bookTitle: 'Mulheres na Inteligência Artificial', 
         bookStatus: 'Coautora • Lançamento 2026',
         bookDesc: 'Uma obra que reúne o conhecimento técnico e as histórias de resiliência de mulheres que estão moldando o futuro da tecnologia e da Inteligência Artificial.'
@@ -28,6 +37,9 @@ const pt = {
     },
     experienceSection: {
         title: 'Trajetória',
+        workTitle: 'Profissional',
+        volunteerTitle: 'Voluntária',
+        internationalTitle: 'Internacional',
         work: [
             { role: 'Analista e Desenvolvedora de Sistemas', 
                 company: 'Engeman Software de Manutenção', 
@@ -129,9 +141,19 @@ const en = {
     hero: {
         roleDescription: 'SQL Developer | Data Analyst | Community Leader', 
         subtitle: 'Computer Scientist passionate about turning data into strategic decisions, education, and opening paths for women in technology.', 
-        cta: 'Contact' },
+        cta: 'Contact'
+    },
+    metrics: {
+        title: 'Impact',
+        years: 'years working with data',
+        sqlMain: 'reduction in SQL query execution time',
+        sqlDetail: '(from 50 minutes to 5 seconds in critical queries)',
+        classes: 'classes and training sessions',
+        mentoring: 'coordination of mentorship programs with over one hundred participants',
+        community: 'community management with over four hundred women'
+    },
     about: { 
-        summary: 'I have been working with data for over 5 years, with a focus on SQL, performance optimization, and building analyses that support decision-making. I have worked on improving complex queries, achieving reductions of up to 99% in execution time, making processes more efficient and reliable. Beyond the technical side, I’m deeply committed to education and to supporting other women.',
+        summary: 'I have been working with data for over 5 years, focusing on building analyses and improving processes that support decision-making. I have experience in SQL query optimization and in developing solutions focused on performance and data reliability in corporate environments. Beyond my technical work, I am actively involved in education and community initiatives, contributing through training, mentoring, and content creation in technology, with a focus on expanding access and supporting the development of other women in the field.',
         bookTitle: 'Women in Artificial Intelligence',
         bookStatus: 'Co-author • 2026 Release',
         bookDesc: 'A book that brings together technical knowledge and stories of resilience from women shaping the future of technology and artificial intelligence.'
@@ -153,6 +175,9 @@ const en = {
     },
     experienceSection: {
         title: 'Journey',
+        workTitle: 'Professional',
+        volunteerTitle: 'Volunteer',
+        internationalTitle: 'International',
         work: [
             { role: 'Systems & Development Analyst', 
                 company: 'Engeman Software de Manutenção', 

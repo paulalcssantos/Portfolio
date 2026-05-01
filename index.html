@@ -64,7 +64,7 @@
         <div class="flex items-center gap-6">
             <!-- Menu de Links -->
             <ul id="nav-links" class="hidden lg:flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0 lg:left-auto w-full lg:w-auto bg-autumn-950 lg:bg-transparent p-6 lg:p-0 items-center gap-8 text-[11px] font-black uppercase tracking-widest text-autumn-100 border-b lg:border-none border-autumn-800">
-                <li><a href="#about" data-t="nav.about" class="hover:text-terracotta transition-colors">Sobre</a></li>
+                <li><a href="#impact" data-t="metrics.title" class="hover:text-terracotta transition-colors">Impacto</a></li>
                 <li><a href="#skills" data-t="nav.skills" class="hover:text-terracotta transition-colors">Habilidades</a></li>
                 <li><a href="#journey" data-t="nav.experience" class="hover:text-terracotta transition-colors">Trajetória</a></li>
                 <li><a href="#classes" data-t="mediaSection.classesTitle" class="hover:text-terracotta transition-colors">Aulas</a></li>
@@ -104,6 +104,50 @@
         </div>
     </header>
 
+    <!-- Impact -->
+    <section id="impact" class="py-20 bg-autumn-100 border-y border-autumn-200 overflow-x-hidden">
+        <div class="max-w-[1600px] mx-auto px-6 reveal">
+
+            <!-- Container Grid: 5 colunas no desktop, 1 no mobile -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-stretch">
+                
+                <!-- Card 1: Anos -->
+                <div class="bg-white border-2 border-autumn-700 p-6 rounded-3xl shadow-lg flex flex-col justify-center text-white transition-transform hover:scale-[1.03]">
+                    <span class="text-5xl font-sans font-black text-terracotta block mb-2">+5</span>
+                    <p class="font-bold text-sm leading-tight text-autumn-900" data-t="metrics.years"></p>
+                </div>
+
+                <!-- Card 2: SQL  -->
+                <div class="lg:col-span-1 bg-white border-2 border-autumn-700 p-6 rounded-3xl shadow-lg flex flex-col justify-center transition-transform hover:scale-[1.03]">
+                    <span class="text-5xl font-sans font-black text-terracotta block mb-2">99%</span>
+                    <p class="text-autumn-900 font-bold text-sm leading-tight">
+                        <span data-t="metrics.sqlMain"></span>
+                        <span class="block text-[12px] font-sans text-autumn-700 mt-2 italic" data-t="metrics.sqlDetail"></span>
+                    </p>
+                </div>
+
+                <!-- Card 3: Aulas -->
+                <div class="bg-white border-2 border-autumn-700 p-6 rounded-3xl shadow-lg flex flex-col justify-center transition-transform hover:scale-[1.03]">
+                    <span class="text-5xl font-sans font-black text-terracotta block mb-2">+30</span>
+                    <p class="font-bold text-sm text-autumn-900 leading-tight" data-t="metrics.classes"></p>
+                </div>
+
+                <!-- Card 4: Mentoria -->
+                <div class="bg-white border-2 border-autumn-700 p-6 rounded-3xl shadow-lg flex flex-col justify-center transition-transform hover:scale-[1.03]">
+                    <span class="text-5xl font-sans font-black text-terracotta block mb-2">+100</span>
+                    <p class="font-bold text-sm text-autumn-900 leading-tight" data-t="metrics.mentoring"></p>
+                </div>
+
+                <!-- Card 5: Comunidade -->
+                <div class="bg-white border-2 border-autumn-700 p-6 rounded-3xl shadow-lg flex flex-col justify-center text-white transition-transform hover:scale-[1.03]">
+                    <span class="text-5xl font-sans font-black text-terracotta block mb-2">+400</span>
+                    <p class="font-bold text-sm text-autumn-900 leading-tight" data-t="metrics.community"></p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
     <!-- About -->
     <section id="about" class="py-24 px-6 bg-autumn-50">
         <div class="max-w-4xl mx-auto text-center reveal">
@@ -111,12 +155,13 @@
             <p class="text-2xl md:text-2xl font-light text-autumn-950 leading-relaxed" data-t="about.summary"></p>
         </div>
     </section>
+    
 
     <!-- Skills -->
     <section id="skills" class="py-24 px-6 bg-autumn-100">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-5xl font-serif text-autumn-950" data-t="skills.techTitle"></h2>
+                <h2 class="text-5xl font-serif text-autumn-950 " data-t="skills.techTitle"></h2>
             </div>
             <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal"></div>
         </div>
@@ -131,9 +176,9 @@
                     </div>
                     
                     <div class="flex flex-wrap gap-2 bg-autumn-50 p-2 rounded-xl border border-autumn-200 justify-center md:justify-start">
-                        <button data-tab="work" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all bg-autumn-950 text-white rounded-lg">Profissional</button>
-                        <button data-tab="voluntary" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all text-autumn-600">Voluntária</button>
-                        <button data-tab="international" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all text-autumn-600">Internacional</button>
+                        <button data-tab="work" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all bg-autumn-950 text-white rounded-lg" data-t="experienceSection.workTitle"></button>
+                        <button data-tab="voluntary" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all text-autumn-600" data-t="experienceSection.volunteerTitle"></button>
+                        <button data-tab="international" class="tab-btn px-6 py-3 text-[10px] font-black uppercase transition-all text-autumn-600" data-t="experienceSection.internationalTitle"></button>
                     </div>
                 </div>
                 <div id="experience-container" class="grid gap-6 reveal"></div>
@@ -210,7 +255,7 @@
     <section id="newsletter" class="py-24 px-6 bg-autumn-100">
         <div class="max-w-7xl mx-auto reveal">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-serif text-autumn-950 uppercase mb-4" data-t="newsletterSection.title"></h2>
+                <h2 class="text-5xl font-serif text-autumn-950 mb-4" data-t="newsletterSection.title"></h2>
                 <p id="newsletter-intro" class="max-w-2xl mx-auto text-autumn-700" data-t="newsletterSection.intro"></p>
             </div>
             <div id="newsletter-editions" class="grid md:grid-cols-3 gap-8"></div>
@@ -242,7 +287,7 @@
             <!-- Links Rápidos e Copyright (Linha Única) -->
             <div class="mt-16 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-widest opacity-80">
                 <div class="flex gap-8">
-                    <a href="#about" class="hover:text-terracotta transition-colors" data-t="nav.about"></a>
+                    <a href="#impact" class="hover:text-terracotta transition-colors" data-t="metrics.title"></a>
                     <a href="#skills" class="hover:text-terracotta transition-colors">Skills</a>
                     <a href="#journey" class="hover:text-terracotta transition-colors" data-t="experienceSection.title"></a>                    
                 </div>
