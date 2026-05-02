@@ -350,7 +350,7 @@ function renderExperience(tab) {
                     <h3 class="text-2xl font-bold text-autumn-950">${exp.role}</h3>
                     <p class="text-terracotta uppercase font-bold text-xs tracking-widest">${exp.company}</p>
                 </div>
-                <span class="text-[10px] font-black uppercase text-autumn-100 bg-autumn-900 px-3 py-1.5 rounded-lg border border-autumn-200">${exp.period}</span>
+                <span class="text-[10px] font-black uppercase text-autumn-100 bg-autumn-900 px-3 py-1.5 rounded-lg border border-autumn-200 text-center">${exp.period}</span>
             </div>
             <ul class="space-y-3">
                 ${exp.description.map(d => `<li class="flex gap-3 text- opacity-95"><div class="w-1.5 h-1.5 bg-terracotta rounded-full mt-1.5"></div>${d}</li>`).join('')}
