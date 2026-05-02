@@ -25,7 +25,7 @@ O projeto utiliza uma paleta **"Autumn Dark"** (Tons de outono), focada em trans
 #### ✨ Destaques do Projeto
 - **Sistema Bilíngue**: Tradução completa via objetos JSON no script, sem dependência de APIs externas de tradução.
 - **Trajetória Dinâmica**: Divisão por abas para experiências Profissionais, Voluntárias e Internacionais.
-- **Mural de Evidências**: Seção de aulas com vídeos embutidos e prova social via feedbacks.
+- **Mural de Evidências**: Seção de aulas e prova social via feedbacks.
 - **Responsividade Total**: Experiência otimizada para Desktop, Tablets e Mobile (Menu Hambúrguer).
 
 ---
@@ -46,7 +46,7 @@ The project follows an **"Autumn Dark"** palette, curated to convey maturity, el
 #### ✨ Project Highlights
 - **Bilingual System**: Full translation handled via JSON objects in JS, ensuring technical accuracy in both languages.
 - **Dynamic Trajectory**: Tabbed navigation for Professional, Voluntary, and International experiences.
-- **Evidence Mural**: Dedicated classes section with embedded videos and social proof through student feedback.
+- **Evidence Mural**: Dedicated classes section and social proof through student feedback.
 - **Fully Responsive**: Optimized experience for Desktop, Tablet, and Mobile devices (Hamburger menu).
 
 ---
