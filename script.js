@@ -1,5 +1,5 @@
 const pt = {
-    nav: { about: 'Sobre', skills: 'Skills', experience: 'Trajetória', classes: 'Aulas', lectures: 'Palestras' },
+    nav: { impact: 'Impacto', about: 'Sobre', skills: 'Skills', experience: 'Trajetória', classes: 'Aulas', lectures: 'Palestras', newsletter: 'Newsletter', contact: 'Contato', focus: 'Estudos Atuais', book: 'Livro', project: 'Projeto' },
     hero: { 
         roleDescription: 'SQL Developer | Data Analyst | Community Leader', 
         subtitle: 'Cientista da Computação apaixonada por transformar dados em decisões estratégicas, pela educação e por abrir caminhos para mulheres na tecnologia.', 
@@ -34,6 +34,17 @@ const pt = {
             tools: [{name: 'Stimulsoft', icon: 'file-text'}, {name: 'Power BI', icon: 'bar-chart'}, {name: 'Tableau', icon: 'pie-chart'}],
             idioms: [{name: 'Inglês', level: 'Avançado - C1', icon: 'languages'}, {name: 'Português', level: 'Nativo', icon: 'user'}]
         }
+    },
+    focus: {
+        label: 'Pesquisa & Tendências',
+        title: 'Estudos Atuais',
+        description: 'Tenho buscado compreender como a Inteligência Artificial está transformando negócios, sociedades e a forma como nos relacionamos com a tecnologia. \nMeu interesse não está apenas na tecnologia em si, mas também no impacto estrutural que ela gera.',
+        topic1Title: 'Segurança',
+        topic1Desc: 'Estudo de vulnerabilidades em modelos de IA e métodos para garantir a integridade e confiabilidade dos sistemas de dados.',
+        topic2Title: 'Regulamentação & Ética',
+        topic2Desc: 'Acompanhamento de frameworks nacionais e globais (como o AI Act) e a implementação de governança para o uso responsável de dados.',
+        topic3Title: 'Pensamento Crítico',
+        topic3Desc: 'Análise de vieses algorítmicos e o desenvolvimento de uma visão analítica sobre a autonomia humana frente à automação.'
     },
     experienceSection: {
         title: 'Trajetória',
@@ -106,8 +117,9 @@ const pt = {
         lectures: [           
             { title: 'Reprograma | 2023', desc: 'Bate-papo com a turma de Python, contando sobre a minha trajetória e como é ser mulher na tecnologia.', image: 'assets/img/talk1.jpg' },
             { title: 'ArcelorMittal | 2024', desc: 'Roda de Conversa: A importância da representatividade feminina.', image: 'assets/img/talk2.jpg' },
-            { title: 'WWWiT | 2025', desc: 'Roda de Conversa: Ciência por Elas - Histórias que Mudaram o Mundo.', image: 'assets/img/talk3.jpg' },
-            { title: 'UEMG | 2025', desc: 'Roda de Conversa: Carreira, impacto e saúde mental na tecnologia.', image: 'assets/img/talk4.jpg' }
+            { title: 'WWWiT | 2025', desc: 'Roda de Conversa: Ciência por Elas - Histórias que Mudaram o Mundo.', image: 'assets/img/talk3.png' },
+            { title: 'UEMG | 2025', desc: 'Roda de Conversa: Carreira, impacto e saúde mental na tecnologia.', image: 'assets/img/talk4.jpg' },
+            { title: 'AI Builders | 2026', desc: 'Workshop sobre Segurança e Inteligência Artificial, voltado para micro e pequenos empreendedores.', image: 'assets/img/talk5.png' }
         ]
     },
     upcomingProject: { 
@@ -137,7 +149,7 @@ const pt = {
 };
 
 const en = {
-    nav: { about: 'About', skills: 'Skills', experience: 'Journey', classes: 'Classes', lectures: 'Talks' },
+    nav: { impact: 'Impact', about: 'About', skills: 'Skills', experience: 'Journey', classes: 'Classes', lectures: 'Talks', newsletter: 'Newsletter', contact: 'Contact', focus: 'Current Learning', book: 'Book', project: 'Project' },
     hero: {
         roleDescription: 'SQL Developer | Data Analyst | Community Leader', 
         subtitle: 'Computer Scientist passionate about turning data into strategic decisions, education, and opening paths for women in technology.', 
@@ -172,6 +184,17 @@ const en = {
             tools: [{name: 'Stimulsoft', icon: 'file-text'}, {name: 'Power BI', icon: 'bar-chart'}, {name: 'Tableau', icon: 'pie-chart'}],
             idioms: [{name: 'English', level: 'Advanced - C1 Level', icon: 'languages'}, {name: 'Portuguese', level: 'Native', icon: 'user'}]
         }
+    },    
+    focus: {
+        label: 'Research & Trends',
+        title: 'Current Learning',
+        description: 'I have been seeking to understand how artificial intelligence is transforming businesses, societies, and the way we interact with technology. \nMy interest goes beyond the technology itself, focusing also on the structural impact it creates.',
+        topic1Title: 'Security',
+        topic1Desc: 'Studying AI model vulnerabilities and methods to ensure the integrity and reliability of data systems.',
+        topic2Title: 'Regulation & Ethics',
+        topic2Desc: 'Monitoring national and global frameworks (like the AI Act) and implementing governance for responsible data use.',
+        topic3Title: 'Critical Thinking',
+        topic3Desc: 'Analyzing algorithmic biases and developing an analytical view of human autonomy in the face of automation.'
     },
     experienceSection: {
         title: 'Journey',
@@ -250,8 +273,9 @@ const en = {
         lectures: [           
             { title: 'Reprograma | 2023', desc: 'Talk with the Python class, sharing my journey and what it’s like to be a woman in technology.', image: 'assets/img/talk1.jpg' },
             { title: 'ArcelorMittal | 2024', desc: 'Discussion Circle: The Importance of Female Representation.', image: 'assets/img/talk2.jpg' },
-            { title: 'WWWiT | 2025', desc: 'Discussion Circle: Science by Women – Stories That Changed the World.', image: 'assets/img/talk3.jpg' },
-            { title: 'UEMG | 2025', desc: 'Discussion Circle: Career, Impact, and Mental Health in Technology.', image: 'assets/img/talk4.jpg' }
+            { title: 'WWWiT | 2025', desc: 'Discussion Circle: Science by Women – Stories That Changed the World.', image: 'assets/img/talk3.png' },
+            { title: 'UEMG | 2025', desc: 'Discussion Circle: Career, Impact, and Mental Health in Technology.', image: 'assets/img/talk4.jpg' },
+            { title: 'AI Builders | 2026', desc: 'Workshop on Security and Artificial Intelligence for Micro and Small Businesses.', image: 'assets/img/talk5.png' }
         ]
     },
     upcomingProject: { 

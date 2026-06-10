@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paula Luiza | Data & SQL | Community Leader</title>
+    <meta name="description" content="Data Analyst, SQL Developer, Educator and Global Leader. Expertise in performance tuning and STEM communities.">
+    <title>Paula Luiza | Data & SQL</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
@@ -49,7 +50,7 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-autumn-950 h-20 flex items-center justify-between px-6 md:px-12 shadow-2xl">
         
-        <!-- Lado Esquerdo: -->
+        <!-- Lado Esquerdo -->
         <a href="#hero" class="flex items-center gap-4 group">
             <div class="w-10 h-10 bg-white border-2 border-autumn-100 rounded overflow-hidden flex items-center justify-center rotate-3 shadow-lg group-hover:rotate-0 transition-transform">
                 <img src="assets/img/Foto Perfil.jpg" alt="Paula Luiza" class="w-full h-full">
@@ -59,27 +60,32 @@
                 <span class="text-[9px] uppercase tracking-widest font-bold text-autumn-400 mt-1">Minas Gerais • Brasil</span>
             </div>
         </a>
-        
-        <!-- Lado Direito: -->
-        <div class="flex items-center gap-6">
-            <!-- Menu de Links -->
-            <ul id="nav-links" class="hidden lg:flex flex-col lg:flex-row absolute lg:relative top-20 lg:top-0 left-0 lg:left-auto w-full lg:w-auto bg-autumn-950 lg:bg-transparent p-6 lg:p-0 items-center gap-8 text-[11px] font-black uppercase tracking-widest text-autumn-100 border-b lg:border-none border-autumn-800">
-                <li><a href="#impact" data-t="metrics.title" class="hover:text-terracotta transition-colors">Impacto</a></li>
-                <li><a href="#skills" data-t="nav.skills" class="hover:text-terracotta transition-colors">Habilidades</a></li>
-                <li><a href="#journey" data-t="nav.experience" class="hover:text-terracotta transition-colors">Trajetória</a></li>
-                <li><a href="#classes" data-t="mediaSection.classesTitle" class="hover:text-terracotta transition-colors">Aulas</a></li>
-                <li><a href="#lectures" data-t="mediaSection.lecturesTitle" class="hover:text-terracotta transition-colors">Palestras</a></li>
-                <li><a href="#newsletter" data-t="newsletterSection.title" class="hover:text-terracotta transition-colors">Newsletter</a></li>
-                <li><a href="#contact" data-t="hero.cta" class="hover:text-terracotta text-autumn-400 transition-colors">Contato</a></li>
-            </ul>
-            
-            <!-- Ícone Hambúrguer  -->
-            <button id="mobile-menu-btn" class="lg:hidden text-autumn-100 text-2xl focus:outline-none">
+
+        <!-- Lado Direito -->
+        <div class="flex items-center gap-3 md:gap-3">
+            <a href="#contact" class="order-1 text-[10px] font-black uppercase tracking-widest text-white px-3 py-2 md:px-2 md:py-2 hover:text-terracotta transition-all">Contato</a>
+
+            <button id="lang-toggle" class="order-2 px-3 py-1.5 rounded-full bg-terracotta text-white text-[10px] font-black uppercase tracking-widest hover:scale-105 transition-all">
+                EN
+            </button>
+
+            <button id="mobile-menu-btn" class="order-3 text-autumn-100 text-2xl focus:outline-none hover:text-terracotta transition-colors">
                 <i class="fas fa-bars"></i>
             </button>
-            
-            <button id="lang-toggle" class="px-3 py-1.5 rounded-full bg-terracotta text-white text-[10px] font-black uppercase tracking-widest hover:scale-105 transition-all order-2">EN</button>
         </div>
+
+        <ul id="nav-links" class="hidden flex-col absolute top-20 left-0 w-full bg-autumn-950 border-b border-autumn-800 shadow-2xl items-center gap-6 py-10 text-[11px] font-black uppercase tracking-widest text-autumn-100">
+            <li><a href="#impact" data-t="nav.impact" class="hover:text-terracotta transition-colors">Impacto</a></li>
+            <li><a href="#about" data-t="nav.about" class="hover:text-terracotta transition-colors">Sobre</a></li>
+            <li><a href="#skills" data-t="nav.skills" class="hover:text-terracotta transition-colors">Habilidades</a></li>
+            <li><a href="#focus" data-t="nav.focus" class="hover:text-terracotta transition-colors">Estudos Atuais</a></li>
+            <li><a href="#journey" data-t="nav.experience" class="hover:text-terracotta transition-colors">Trajetória</a></li>
+            <li><a href="#classes" data-t="nav.classes" class="hover:text-terracotta transition-colors">Aulas</a></li>
+            <li><a href="#lectures" data-t="nav.lectures" class="hover:text-terracotta transition-colors">Palestras</a></li>
+            <li><a href="#book" data-t="nav.book" class="hover:text-terracotta transition-colors">Livro</a></li>
+            <li><a href="#upcoming" data-t="nav.project" class="hover:text-terracotta transition-colors">Projeto</a></li>
+            <li><a href="#newsletter" data-t="nav.newsletter" class="hover:text-terracotta transition-colors">Newsletter</a></li>
+        </ul>
     </nav>
 
     <!-- Hero -->
@@ -167,6 +173,40 @@
         </div>
     </section>
 
+    <!-- Current Learning -->
+    <section id="focus" class="py-24 px-6 bg-autumn-950 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="mb-16 text-center md:text-left">
+
+                <h2 class="text-5xl font-serif mb-6" data-t="focus.title">Estudos Atuais</h2>
+                <p class="text-autumn-200 max-w-7xl text-lg font-light leading-relaxed mx-auto md:mx-0" data-t="focus.description"></p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group">
+                    <i class="fas fa-shield-halved text-autumn-400 text-3xl mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4" data-t="focus.topic1Title">Segurança & Robustez</h4>
+                    <p class="text-sm text-autumn-300 leading-relaxed" data-t="focus.topic1Desc"></p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group">
+                    <i class="fas fa-gavel text-autumn-400 text-3xl mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4" data-t="focus.topic2Title">Regulamentação & Ética</h4>
+                    <p class="text-sm text-autumn-300 leading-relaxed" data-t="focus.topic2Desc"></p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group">
+                    <i class="fas fa-brain text-autumn-400 text-3xl mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4" data-t="focus.topic3Title">Pensamento Crítico na IA</h4>
+                    <p class="text-sm text-autumn-300 leading-relaxed" data-t="focus.topic3Desc"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Journey -->
     <section id="journey" class="py-24 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
@@ -228,12 +268,12 @@
     <section id="lectures" class="py-24 px-6 bg-white">
         <div class="max-w-7xl mx-auto reveal">
             <h2 class="text-5xl font-serif text-autumn-950 mb-16 text-center" data-t="mediaSection.lecturesTitle"></h2>
-            <div id="media-lectures" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            <div id="media-lectures" class="grid md:grid-cols-2 lg:grid-cols-5 gap-6"></div>
         </div>
     </section>
 
     <!-- Book -->
-    <section class="py-24 bg-autumn-950 text-white overflow-hidden reveal">
+    <section id="book" class="py-24 bg-autumn-950 text-white overflow-hidden reveal">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
             <div>
                 <span class="text-autumn-400 font-bold tracking-[0.3em] text-[12px] uppercase mb-4 block" data-t="about.bookStatus"></span>
