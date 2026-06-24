@@ -2,7 +2,7 @@ const pt = {
     nav: { impact: 'Impacto', about: 'Sobre', skills: 'Skills', experience: 'Trajetória', classes: 'Aulas', lectures: 'Palestras', newsletter: 'Newsletter', contact: 'Contato', focus: 'Estudos Atuais', book: 'Livro', project: 'Projeto' },
     hero: { 
         roleDescription: 'SQL Developer | Data Analyst | Community Leader', 
-        subtitle: 'Cientista da Computação apaixonada por transformar dados em decisões estratégicas, pela educação e por abrir caminhos para mulheres na tecnologia.', 
+        subtitle: 'Cientista da Computação apaixonada por dados, pela educação e por abrir caminhos para mulheres na tecnologia.', 
         cta: 'Contato' 
     },
     metrics: {
@@ -152,7 +152,7 @@ const en = {
     nav: { impact: 'Impact', about: 'About', skills: 'Skills', experience: 'Journey', classes: 'Classes', lectures: 'Talks', newsletter: 'Newsletter', contact: 'Contact', focus: 'Current Learning', book: 'Book', project: 'Project' },
     hero: {
         roleDescription: 'SQL Developer | Data Analyst | Community Leader', 
-        subtitle: 'Computer Scientist passionate about turning data into strategic decisions, education, and opening paths for women in technology.', 
+        subtitle: 'Computer Scientist passionate about data, education, and opening paths for women in technology.', 
         cta: 'Contact'
     },
     metrics: {
