@@ -11,8 +11,8 @@ const pt = {
         sqlMain: 'de redução no tempo de execução de consultas SQL',
         sqlDetail: '(de 50 minutos para 5 segundos em consultas críticas)',
         classes: 'aulas e treinamentos',
-        mentoring: 'coordenação de programas de mentoria com mais de cem participantes',
-        community: 'gestão de comunidade com mais de quatrocentas mulheres'
+        mentoring: 'participantes em programas de mentoria coordenados',
+        community: 'mulheres em comunidade de tecnologia liderada'
     },
     about: { 
         summary: 'Trabalho com dados há mais de 5 anos, atuando na construção de análises e na melhoria de processos que apoiam a tomada de decisão. Tenho experiência com otimização de consultas SQL e desenvolvimento de soluções voltadas para performance e confiabilidade de dados em ambientes corporativos. Além da atuação técnica, participo ativamente de iniciativas ligadas à educação e à comunidade, contribuindo com formação, mentoria e criação de conteúdos na área de tecnologia, com foco em ampliar o acesso e o desenvolvimento de outras mulheres na área.', 
@@ -161,8 +161,8 @@ const en = {
         sqlMain: 'reduction in SQL query execution time',
         sqlDetail: '(from 50 minutes to 5 seconds in critical queries)',
         classes: 'classes and training sessions',
-        mentoring: 'coordination of mentorship programs with over one hundred participants',
-        community: 'community management with over four hundred women'
+        mentoring: 'participants in coordinated mentorship programs',
+        community: 'women in a technology community under my leadership'
     },
     about: { 
         summary: 'I have been working with data for over 5 years, focusing on building analyses and improving processes that support decision-making. I have experience in SQL query optimization and in developing solutions focused on performance and data reliability in corporate environments. Beyond my technical work, I am actively involved in education and community initiatives, contributing through training, mentoring, and content creation in technology, with a focus on expanding access and supporting the development of other women in the field.',
