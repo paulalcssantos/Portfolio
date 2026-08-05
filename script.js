@@ -69,8 +69,8 @@ const pt = {
             { role: 'Instrutora', 
                 company: 'WoMakersCode', 
                 period: 'Desde 2025', 
-                description: ['Instrutora voluntária no Bootcamp de BI da WoMakersCode, ministrando aulas gravadas sobre Bancos de Dados SQL, Pipelines de Dados e processos de ETL. ', 'Responsável por explicar fundamentos de bancos de dados, conceitos de SQL e boas práticas. ', 'Contribuindo para a formação de mulheres em tecnologia ao unir teoria e prática por meio de exercícios aplicados. '] },
-            { role: 'Voluntária', 
+                description: ['Atuação como instrutora, ministrando aulas sobre Bancos de Dados, SQL, Python, Pipelines de Dados, ETL e Visualização de Dados. Responsável pelo desenvolvimento de conteúdos educativos e pela formação de mulheres em tecnologia, unindo teoria e prática por meio de exercícios aplicados.'] },
+            { role: 'Voluntária de Conteúdo em IA', 
                 company: 'Reprograma', 
                 period: '2024', 
                 description: ['Voluntária na organização sem fins lucrativos Reprograma, auxiliando na criação de conteúdos educativos sobre Inteligência Artificial, incluindo artigos, posts em redes sociais e materiais para workshops.  '] }
@@ -219,8 +219,8 @@ const en = {
             { role: 'Instructor', 
                 company: 'WoMakersCode',
                 period: 'Since 2025', 
-                description: ['Volunteer instructor in the BI Bootcamp by WoMakersCode, teaching recorded lessons on SQL Databases I, Data Pipelines, and ETL processes.', 'Responsible for explaining database fundamentals, SQL concepts, and best practices.', 'Contributing to the training of women in technology by combining theory and practice through applied exercises.'] },
-            { role: 'Volunteer', 
+                description: ['Instructor at WoMakersCode, delivering classes on Databases, SQL, Python, Data Pipelines, ETL, and Data Visualization. Responsible for developing educational content and training women in technology by combining theory and hands-on practice through applied exercises.'] },
+            { role: 'AI Content Volunteer', 
                 company: 'Reprograma', 
                 period: '2024', 
                 description: ['Volunteer at the nonprofit organization Reprograma, assisting in the creation of educational content on Artificial Intelligence, including articles, social media posts, and materials for workshops.'] }
