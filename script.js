@@ -52,6 +52,10 @@ const pt = {
         volunteerTitle: 'Voluntária',
         internationalTitle: 'Internacional',
         work: [
+            { role: 'Educadora de Tecnologia | Instrutora de Dados', 
+                company: 'Autônomo', 
+                period: 'Desde 2026', 
+                description: ['Atuo como educadora de tecnologia e instrutora de dados, ministrando aulas, treinamentos e workshops para programas de formação em tecnologia, organizações e diferentes públicos.', 'Desenvolvo conteúdos educacionais, videoaulas, materiais de apoio e exercícios práticos sobre SQL, Dados, Python, ETL e Inteligência Artificial, conectando conceitos técnicos a experiências de aprendizagem práticas e acessíveis.', 'Também desenvolvo e adapto conteúdos de acordo com o público e o contexto de cada formação, combinando conhecimento técnico, comunicação e prática para facilitar a aprendizagem.'] },
             { role: 'Analista e Desenvolvedora de Sistemas', 
                 company: 'Engeman Software de Manutenção', 
                 period: '3,5 anos', 
@@ -202,6 +206,10 @@ const en = {
         volunteerTitle: 'Volunteer',
         internationalTitle: 'International',
         work: [
+            { role: 'Tech Educator | Data Instructor', 
+                company: 'Self-employed', 
+                period: 'Since 2026', 
+                description: ['I work as a technology educator and data instructor, delivering classes, training sessions, and workshops for technology training programs, organizations, and diverse audiences.', 'I develop educational content, video lessons, supporting materials, and hands-on exercises on SQL, Data, Python, ETL, and Artificial Intelligence, connecting technical concepts with practical and accessible learning experiences.', 'I also develop and adapt content according to the audience and context of each training program, combining technical knowledge, communication, and hands-on practice to facilitate learning.'] },
             { role: 'Systems & Development Analyst', 
                 company: 'Engeman Software de Manutenção', 
                 period: '3.5 years', 
