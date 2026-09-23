@@ -15,7 +15,7 @@ const pt = {
         community: 'mulheres em comunidade de tecnologia liderada'
     },
     about: { 
-        summary: 'Trabalho com dados há mais de 5 anos, atuando na construção de análises e na melhoria de processos que apoiam a tomada de decisão. Tenho experiência com otimização de consultas SQL e desenvolvimento de soluções voltadas para performance e confiabilidade de dados em ambientes corporativos. Além da atuação técnica, participo ativamente de iniciativas ligadas à educação e à comunidade, contribuindo com formação, mentoria e criação de conteúdos na área de tecnologia, com foco em ampliar o acesso e o desenvolvimento de outras mulheres na área.', 
+        summary: 'Trabalho com dados há mais de 6 anos, atuando na construção de análises e na melhoria de processos que apoiam a tomada de decisão. Tenho experiência com otimização de consultas SQL e desenvolvimento de soluções voltadas para performance e confiabilidade de dados em ambientes corporativos. Além da atuação técnica, participo ativamente de iniciativas ligadas à educação e à comunidade, contribuindo com formação, mentoria e criação de conteúdos na área de tecnologia, com foco em ampliar o acesso e o desenvolvimento de outras mulheres na área.', 
         bookTitle: 'Mulheres na Inteligência Artificial', 
         bookStatus: 'Coautora • Lançamento 2026',
         bookDesc: 'Uma obra que reúne o conhecimento técnico e as histórias de resiliência de mulheres que estão moldando o futuro da tecnologia e da Inteligência Artificial.'
@@ -165,7 +165,7 @@ const en = {
         community: 'women in a technology community under my leadership'
     },
     about: { 
-        summary: 'I have been working with data for over 5 years, focusing on building analyses and improving processes that support decision-making. I have experience in SQL query optimization and in developing solutions focused on performance and data reliability in corporate environments. Beyond my technical work, I am actively involved in education and community initiatives, contributing through training, mentoring, and content creation in technology, with a focus on expanding access and supporting the development of other women in the field.',
+        summary: 'I have been working with data for over 6 years, focusing on building analyses and improving processes that support decision-making. I have experience in SQL query optimization and in developing solutions focused on performance and data reliability in corporate environments. Beyond my technical work, I am actively involved in education and community initiatives, contributing through training, mentoring, and content creation in technology, with a focus on expanding access and supporting the development of other women in the field.',
         bookTitle: 'Women in Artificial Intelligence',
         bookStatus: 'Co-author • 2026 Release',
         bookDesc: 'A book that brings together technical knowledge and stories of resilience from women shaping the future of technology and artificial intelligence.'
